@@ -17,7 +17,9 @@
 
 ## 下载 `codeblocks-20.03mingw-setup.exe` 
 
-助教会提供。
+- [交大云盘下载链接](https://jbox.sjtu.edu.cn/l/71KbdW)
+- 或者向助教索取。
+
 
 ## 安装
 
