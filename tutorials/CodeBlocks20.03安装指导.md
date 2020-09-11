@@ -1,3 +1,4 @@
+
 # CodeBlocks 20.03(Windows) 安装与使用指导
 
 > 遇到了任何问题都不要慌张，
@@ -6,7 +7,13 @@
 > 3. 微信群里询问
 > 4. 百度搜索你遇到的问题
 
-[TOC]
+- [CodeBlocks 20.03(Windows) 安装与使用指导](#codeblocks-2003windows-安装与使用指导)
+  - [下载 `codeblocks-20.03mingw-setup.exe`](#下载-codeblocks-2003mingw-setupexe)
+  - [安装](#安装)
+  - [第一次使用](#第一次使用)
+    - [文件关联 CodeBlocks 的提示](#文件关联-codeblocks-的提示)
+    - [新建一个C++项目](#新建一个c项目)
+  - [CodeBlocks 如何进行简单的代码调试 / Debug ?](#codeblocks-如何进行简单的代码调试--debug-)
 
 ## 下载 `codeblocks-20.03mingw-setup.exe` 
 
