@@ -28,7 +28,7 @@
 
 #### 1. 如何登陆 ftp
 
-电脑上输入 win + e 打开资源管理器(其中win键是一个形状像“田”的键)，然后在快速访问中输入ftp地址，例如 ftp://public.sjtu.edu.cn ，之后输入账号密码即可。一般不要勾选保存密码。
+电脑上输入 `win` + `e` 打开资源管理器(其中win键是一个形状像“田”的键)，然后在快速访问中输入ftp地址，例如 ftp://public.sjtu.edu.cn ，之后输入账号密码即可。一般不要勾选保存密码。
 
 ![](tutorials/imgs/ftp_start.png)
 
@@ -43,7 +43,7 @@ win10 上原生自带截图
 - 快捷键 `Win Shift S` 
 - 键盘上的 `PrtSc` 键
 
-- 微信的 `Alt+A` 
+- 微信的 `Alt A` 
 - Tim/QQ 的 `Ctrl Alt A`
 
 #### 3. 什么是文件的后缀名？
