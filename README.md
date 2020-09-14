@@ -1,8 +1,23 @@
 # C++ 程序设计学习指导
 
+> 遇到了任何问题都不要慌张，
+> 1. 上机的时候向助教询问
+> 2. QQ群里主动提问或者私聊助教询问
+> 3. 微信群里询问
+> 4. 百度搜索你遇到的问题
+
+- [C++ 程序设计学习指导](#c-程序设计学习指导)
+  - [Tutorials](#tutorials)
+  - [Q & A](#q--a)
+      - [1. 如何登陆 ftp](#1-如何登陆-ftp)
+      - [2. 如何截图](#2-如何截图)
+      - [3. 什么是文件的后缀名？](#3-什么是文件的后缀名)
+
 ## Tutorials
 
-[CodeBlocks 20.03(Windows) 安装与使用指导](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks20.03安装指导.md)
+* [CodeBlocks 20.03(Windows) 安装与使用指导](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks20.03安装指导.md)
+
+* [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
 
 ## Q & A 
 
@@ -26,7 +41,9 @@ win10 上原生自带截图
 - 微信的 `Alt+A` 
 - Tim/QQ 的 `Ctrl Alt A`
 
-#### 3. 什么是文件的后缀名？什么是.cpp文件啊？我在文件管理器/我在Codeblocks工程里面没有看到有.cpp文件和.h文件啊，如何查看文件后缀名呢？
+#### 3. 什么是文件的后缀名？
+
+> 什么是.cpp文件啊？我在文件管理器/我在Codeblocks工程里面没有看到有.cpp文件和.h文件啊，如何查看文件后缀名呢？
 
 在文件资源管理器中，在【查看】选项中勾选文件扩展名，就可以显示文件后缀名了。
 
