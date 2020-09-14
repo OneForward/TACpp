@@ -15,9 +15,9 @@
 
 - 引用自己实现的头文件应使用双引号而非尖括号
 
-```c++
-#include "my_headers.h" // OK
-```
+  ```c++
+  #include "my_headers.h" // OK
+  ```
 
 - 指针的声明问题。
 
@@ -68,19 +68,19 @@
 
 - 前置函数声明，在后面实现函数时，函数签名不匹配。(`const`，`&`修饰符)
 
- 例如
+  例如
 
-```c++
-// 前置的函数声明
-bool search(const int&) const;
+  ```c++
+  // 前置的函数声明
+  bool search(const int&) const;
 
-// 后置函数实现
-// void search(const int&) const {...}; 错误，函数签名不匹配
-// bool search(int&) const {...}; 错误，函数签名不匹配
-// bool search(const int) const {...}; 错误，函数签名不匹配
-// bool search(const int&) {...}; 错误，函数签名不匹配
-bool search(const int&) const {...}; // OK
-```
+  // 后置函数实现
+  // void search(const int&) const {...}; 错误，函数签名不匹配
+  // bool search(int&) const {...}; 错误，函数签名不匹配
+  // bool search(const int) const {...}; 错误，函数签名不匹配
+  // bool search(const int&) {...}; 错误，函数签名不匹配
+  bool search(const int&) const {...}; // OK
+  ```
 
 - C++的赋值都是值传递。体会差别：
 
@@ -161,32 +161,32 @@ int main() {
 
 - 继承抽象基类时，没有将该抽象基类所有的纯虚成员重新实现。
 
-```c++
-class List {
-public:
-    virtual int size() const = 0; // pure virtual function 
-    virtual ˜List() {} // destructor 
-};
+  ```c++
+  class List {
+  public:
+      virtual int size() const = 0; // pure virtual function 
+      virtual ˜List() {} // destructor 
+  };
 
-class Stack: public List {
-public:
-    // 忘记定义和实现 int size() const ...
-};
-```
+  class Stack: public List {
+  public:
+      // 忘记定义和实现 int size() const ...
+  };
+  ```
 
 
 
 - 定义某个继承类时，基类必须已经实现，且继承类应在定义时实现。
 
-```c++
-struct List; 
-strcut LinkList: public List {}; // 错误，基类没有实现
-```
+  ```c++
+  struct List; 
+  strcut LinkList: public List {}; // 错误，基类没有实现
+  ```
 
-```c++
-struct List {}; 
-strcut LinkList: public List; // 错误，继承类没有在定义处实现
-```
+  ```c++
+  struct List {}; 
+  strcut LinkList: public List; // 错误，继承类没有在定义处实现
+  ```
 
 - 访问内嵌类。
 
