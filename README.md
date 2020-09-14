@@ -1,4 +1,4 @@
-# C++ 程序设计学习指导
+# C++ 程序设计学习指导【不断更新】
 
 > 遇到了任何问题都不要慌张，
 > 1. 上机的时候向助教询问
@@ -6,8 +6,11 @@
 > 3. 微信群里询问
 > 4. 百度搜索你遇到的问题
 
-- [C++ 程序设计学习指导](#c-程序设计学习指导)
+- [C++ 程序设计学习指导【不断更新】](#c-程序设计学习指导不断更新)
   - [Tutorials](#tutorials)
+      - [CodeBlocks 20.03(Windows) 安装与使用指导](#codeblocks-2003windows-安装与使用指导)
+      - [(Optional)在MacOS上使用VS Code配置C++环境](#optional在macos上使用vs-code配置c环境)
+      - [常见的C++语法问题【不断更新】](#常见的c语法问题不断更新)
   - [Q & A](#q--a)
       - [1. 如何登陆 ftp](#1-如何登陆-ftp)
       - [2. 如何截图](#2-如何截图)
@@ -15,9 +18,11 @@
 
 ## Tutorials
 
-* [CodeBlocks 20.03(Windows) 安装与使用指导](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks20.03安装指导.md)
+#### [CodeBlocks 20.03(Windows) 安装与使用指导](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks20.03安装指导.md)
 
-* [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
+#### [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
+
+#### [常见的C++语法问题【不断更新】](https://github.com/OneForward/TACpp/blob/master/tutorials/常见的C++语法问题.md)
 
 ## Q & A 
 
