@@ -14,6 +14,10 @@
     - [文件关联 CodeBlocks 的提示](#文件关联-codeblocks-的提示)
     - [新建一个C++项目](#新建一个c项目)
   - [CodeBlocks 如何进行简单的代码调试 / Debug ?](#codeblocks-如何进行简单的代码调试--debug-)
+  - [汉化](#汉化)
+    - [汉化包链接](#汉化包链接)
+    - [解压汉化包](#解压汉化包)
+    - [配置CodeBlocks](#配置codeblocks)
 
 ## 下载 `codeblocks-20.03mingw-setup.exe` 
 
@@ -165,3 +169,49 @@ int main()
 最后，可以点击红色的 X 退出 Debug。
 
 ![](imgs/DebugEnd.png)
+
+## 汉化
+
+### 汉化包链接
+
+[交大云盘](https://jbox.sjtu.edu.cn/l/Ou6oNv)
+
+汉化包是一个名为 `locale.zip` 的压缩包
+
+### 解压汉化包
+
+首先找到你们的 `CodeBlocks` 的安装位置，点进 `share` 文件夹
+
+![](imgs/cb_path_share.png)
+
+然后点进 `CodeBlocks` 文件夹
+
+![](imgs/cb_cb.png)
+
+在当前这个文件夹下解压汉化包
+
+![](imgs/unzip.png)
+
+最终的汉化文件的位置应该如图所示，即 `locale\zh_CN\zh_CN.mo`
+
+![](imgs/zh_CN_final.png)
+
+### 配置CodeBlocks
+
+* 打开 CodeBlocks, 点击 Settings->Environment
+
+![](imgs/setting_env.png)
+
+* 点击 View
+
+* 勾选 Internationalization
+
+* 右侧下拉选择 Chinese(Simplified)
+
+* 点击 OK 即可
+
+![](imgs/env_international.png)
+
+* 重启 CodeBlocks 即可看到汉化效果
+
+![](imgs/zh_CN_result.png)
