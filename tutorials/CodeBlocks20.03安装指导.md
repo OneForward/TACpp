@@ -1,5 +1,5 @@
 
-# [CodeBlocks 20.03(Windows) 安装与使用指导](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks20.03安装指导.md)
+# [CodeBlocks 相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks20.03安装指导.md)
 
 > 遇到了任何问题都不要慌张，
 > 1. 上机的时候向助教询问
@@ -7,7 +7,9 @@
 > 3. 微信群里询问
 > 4. 百度搜索你遇到的问题
 
-- [CodeBlocks 20.03(Windows) 安装与使用指导](#codeblocks-2003windows-安装与使用指导)
+本教程提供 CodeBlocks 【以版本20.03(Windows)为例】 的安装、汉化、使用以及其他问题的指导。
+
+- [CodeBlocks 相关问题汇总](#codeblocks-相关问题汇总)
   - [下载 `codeblocks-20.03mingw-setup.exe`](#下载-codeblocks-2003mingw-setupexe)
   - [安装](#安装)
   - [第一次使用](#第一次使用)
@@ -18,6 +20,13 @@
     - [汉化包链接](#汉化包链接)
     - [解压汉化包](#解压汉化包)
     - [配置CodeBlocks](#配置codeblocks)
+  - [Q & A](#q--a)
+    - [1. 如何解决中文乱码问题](#1-如何解决中文乱码问题)
+      - [设置文件编码格式](#设置文件编码格式)
+      - [在编译命令中增加编码格式的设置](#在编译命令中增加编码格式的设置)
+    - [2. 如何修改编译器类型](#2-如何修改编译器类型)
+    - [3. 如何设置编译器路径](#3-如何设置编译器路径)
+    - [4. 首页跳出的 `Tip of the Day` 是什么](#4-首页跳出的-tip-of-the-day-是什么)
 
 ## 下载 `codeblocks-20.03mingw-setup.exe` 
 
@@ -215,3 +224,65 @@ int main()
 * 重启 CodeBlocks 即可看到汉化效果
 
 ![](imgs/zh_CN_result.png)
+
+
+## Q & A
+
+### 1. 如何解决中文乱码问题
+
+建议阅读孟老师提供的文档。[交大云盘链接](https://jbox.sjtu.edu.cn/l/toTO8T)
+
+或者按照如下步骤进行修改，如果仍然失败请咨询助教。
+
+#### 设置文件编码格式
+
+* 设置 -> 编辑器
+
+![](imgs/setting-editor.png)
+
+* 设置文件格式默认为 UTF-8
+
+![](imgs/file-encoding.png)
+
+#### 在编译命令中增加编码格式的设置
+
+* 设置 -> 编译器
+
+![](imgs/setting-compiler.png)
+
+* 在图中位置添加编码命令，请在以下2种可能的命令中依次尝试
+
+```sh
+-fexec-charset=gbk
+```
+
+```sh
+-finput-charset=gbk -fexec-charset=gbk
+```
+
+![](imgs/other-compiler-options.png)
+
+
+### 2. 如何修改编译器类型
+
+* Settings-›Compiler
+
+![](imgs/setting-compiler.png)
+
+* 在 global compiler settings下，Selected Compiler选择GNU GCC Compiler，然后点击Set as default
+  
+![](imgs/select-compiler.png)
+
+### 3. 如何设置编译器路径
+
+* Settings-›Compiler
+
+![](imgs/setting-compiler.png)
+
+* 在 global compiler settings下，executable toolchain 下设置你的编译器的安装目录
+  
+![](imgs/compiler-path.png)
+
+### 4. 首页跳出的 `Tip of the Day` 是什么
+
+每日小贴士，不用管。如果以后不想看到请去掉底下勾选。
