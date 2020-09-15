@@ -18,17 +18,17 @@
 
 ## Tutorials
 
-#### [CodeBlocks相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks20.03安装指导.md)
+#### [CodeBlocks相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
 
-[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks20.03安装指导.md)
+[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
 
 #### [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
 
-[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks20.03安装指导.md)
+[点击此处跳转](https://code.visualstudio.com/docs/cpp/config-clang-mac)
 
-#### [C++编程问题汇总【不断更新】](https://github.com/OneForward/TACpp/blob/master/tutorials/常见的C++语法问题.md)
+#### [C++编程问题汇总【不断更新】](https://github.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
 
-[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/常见的C++语法问题.md)
+[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
 
 ## Q & A 
 
