@@ -8,6 +8,7 @@
 
 - [C++ 程序设计学习指导【不断更新】](#c-程序设计学习指导不断更新)
   - [Tutorials](#tutorials)
+      - [EduCoder相关问题汇总](#educoder相关问题汇总)
       - [CodeBlocks相关问题汇总](#codeblocks相关问题汇总)
       - [(Optional)在MacOS上使用VS Code配置C++环境](#optional在macos上使用vs-code配置c环境)
       - [C++编程问题汇总【不断更新】](#c编程问题汇总不断更新)
@@ -15,8 +16,13 @@
       - [1. 如何登陆 ftp](#1-如何登陆-ftp)
       - [2. 如何截图](#2-如何截图)
       - [3. 什么是文件的后缀名？](#3-什么是文件的后缀名)
+      - [4. 有哪些常用的快捷键](#4-有哪些常用的快捷键)
 
 ## Tutorials
+
+#### [EduCoder相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
+
+[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
 
 #### [CodeBlocks相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
 
@@ -59,3 +65,12 @@ win10 上原生自带截图
 在文件资源管理器中，在【查看】选项中勾选文件扩展名，就可以显示文件后缀名了。
 
 ![](tutorials/imgs/file_ext.png)
+
+#### 4. 有哪些常用的快捷键
+
+* `Ctrl S` ： 保存
+* `Ctrl A` ： 全选
+* `Ctrl C` ： 复制
+* `Ctrl V` ： 粘贴
+* `Ctrl Z` ： 撤销
+* `Ctrl Y` ： 恢复
