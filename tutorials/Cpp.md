@@ -27,6 +27,7 @@
 
 程序应当含有一个名为 main 的全局函数，它被指定为程序的启动点。它应当有下列形式之一：
 
+
 ```cpp
 int main () { body }	(1)	
 int main (int argc, char *argv[]) { body }	(2)	
@@ -38,6 +39,20 @@ body	-	main 函数的函数体
 
 
 因此，main 函数的参数可以用于为编译后的程序传递命令行参数。
+
+
+#### 4. 如何计算立方根？
+
+编译开启 -std=c++11 或者更新的标准之后，可以使用 `cbrt` 函数
+
+否则，使用传统的 `pow`  函数，但要注意符号问题。
+
+其签名分别为 
+
+```cpp
+float cbrt(float arg); // cbrt(x)  x 可以为任意实数
+float pow ( float base, float exp ); // pow(x, 1.0/3) 注意 x 需非负
+```
 
 
 ## C++语法问题
