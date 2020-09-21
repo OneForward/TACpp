@@ -17,6 +17,7 @@
     - [4. 如何开启 C++11 或者更新的 C++ 标准](#4-如何开启-c11-或者更新的-c-标准)
     - [5. 首页跳出的 `Tip of the Day` 是什么](#5-首页跳出的-tip-of-the-day-是什么)
     - [6. 如何设置 Debug / 调试器 路径](#6-如何设置-debug--调试器-路径)
+    - [7. 侧边栏消失了怎么办？](#7-侧边栏消失了怎么办)
   - [下载 `codeblocks-20.03mingw-setup.exe`](#下载-codeblocks-2003mingw-setupexe)
   - [安装](#安装)
   - [第一次使用](#第一次使用)
@@ -111,6 +112,10 @@
 
 ![](imgs/debugger-path.png)
 
+### 7. 侧边栏消失了怎么办？
+
+* 视图 -> 管理器, 点击勾选
+![](imgs/setting-view-manager.png)
 
 ## 下载 `codeblocks-20.03mingw-setup.exe` 
 
