@@ -6,11 +6,17 @@
     - [使用 `printf`](#使用-printf)
     - [使用流控制库](#使用流控制库)
     - [浮点数定宽、对齐](#浮点数定宽对齐)
+    - [字符串定宽、对齐](#字符串定宽对齐)
+    - [浮点数精度设置](#浮点数精度设置)
   - [对两种格式控制的评论](#对两种格式控制的评论)
   - [`printf` 详解](#printf-详解)
     - [函数原型](#函数原型)
     - [格式化字符串的参数](#格式化字符串的参数)
     - [例子](#例子)
+
+代码在 [test_base.cpp](https://github.com/OneForward/TACpp/blob/master/tutorials/codes/test_base.cpp), [test_fill_width.cpp](https://github.com/OneForward/TACpp/blob/master/tutorials/codes/test_fill_width.cpp)
+
+
 
 ## 整数 $n$ 进制
 
@@ -108,7 +114,7 @@ cout << "宽度为10，右对齐：["
 宽度为10，左对齐，空白补*：[4*********]
 ```
 
-#### 字符串定宽、对齐
+### 字符串定宽、对齐
 
 ```cpp
 auto s = "Hello";
@@ -136,7 +142,7 @@ cout << "宽度为10，右对齐：[" << setfill(' ')
 宽度为10，左对齐：[Hello     ]
 ```
 
-#### 浮点数精度设置
+### 浮点数精度设置
 
 ```cpp
 double x = 20.0 / 3;
