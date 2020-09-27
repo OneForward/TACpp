@@ -12,7 +12,7 @@
     - [CodeBlocks相关问题汇总](#codeblocks相关问题汇总)
     - [(Optional)在MacOS上使用VS Code配置C++环境](#optional在macos上使用vs-code配置c环境)
     - [C++编程问题汇总【不断更新】](#c编程问题汇总不断更新)
-    - [C++流控制库 iomanip  与 C 风格 printf 的对比](#c流控制库-iomanip-与-c-风格-printf-的对比)
+    - [C++流控制库 iomanip 与 C 风格 printf 的对比](#c流控制库-iomanip-与-c-风格-printf-的对比)
   - [Q & A](#q--a)
     - [1. 如何登陆 ftp](#1-如何登陆-ftp)
     - [2. 如何截图](#2-如何截图)
@@ -37,7 +37,7 @@
 
 [点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
 
-### [C++流控制库 iomanip  与 C 风格 printf 的对比](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
+### [C++流控制库 iomanip 与 C 风格 printf 的对比](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
 
 [点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
 
