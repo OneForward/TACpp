@@ -6,40 +6,20 @@
 > 3. 微信群里询问
 > 4. 百度搜索你遇到的问题
 
-- [C++ 程序设计学习指导【不断更新】](#c-程序设计学习指导不断更新)
-  - [Tutorials](#tutorials)
-    - [EduCoder相关问题汇总](#educoder相关问题汇总)
-    - [CodeBlocks相关问题汇总](#codeblocks相关问题汇总)
-    - [(Optional)在MacOS上使用VS Code配置C++环境](#optional在macos上使用vs-code配置c环境)
-    - [C++编程问题汇总【不断更新】](#c编程问题汇总不断更新)
-    - [C++流控制库iomanip与C风格printf的对比](#c流控制库iomanip与c风格printf的对比)
-  - [Q & A](#q--a)
-    - [1. 如何登陆 ftp](#1-如何登陆-ftp)
-    - [2. 如何截图](#2-如何截图)
-    - [3. 什么是文件的后缀名？](#3-什么是文件的后缀名)
-    - [4. 有哪些常用的快捷键](#4-有哪些常用的快捷键)
 
 ## Tutorials
 
-### [EduCoder相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
+ * [Qt实践-2048游戏](https://github.com/OneForward/TACpp/blob/master/tutorials/qt-2048-v1.md)
 
-[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
+ * [EduCoder相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
 
-### [CodeBlocks相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
+ * [CodeBlocks相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
 
-[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
+ * [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
 
-### [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
+ * [C++编程问题汇总【不断更新】](https://github.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
 
-[点击此处跳转](https://code.visualstudio.com/docs/cpp/config-clang-mac)
-
-### [C++编程问题汇总【不断更新】](https://github.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
-
-[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
-
-### [C++流控制库iomanip与C风格printf的对比](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
-
-[点击此处跳转](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
+ * [C++流控制库iomanip与C风格printf的对比](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
 
 ## Q & A 
 
