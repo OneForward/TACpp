@@ -6,3 +6,6 @@ slides/**
 **.pdf
 **/.vscode/**
 tutorials/qt-2048.md
+labs/build*
+**.pro.user
+labs/2048-tutorial-release
