@@ -9,6 +9,8 @@
 
 ## Tutorials
 
+ * [Qt的安装与简单使用](https://github.com/OneForward/TACpp/blob/master/tutorials/qt-install.md)
+
  * [Qt实践-2048游戏](https://github.com/OneForward/TACpp/blob/master/tutorials/qt-2048-v1.md)
 
  * [EduCoder相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
