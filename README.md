@@ -23,7 +23,9 @@
 
  * [C++流控制库iomanip与C风格printf的对比](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
 
-## Q & A 
+
+<details>
+  <summary> Q & A  </summary>
 
 ### 1. 如何登陆 ftp
 
@@ -61,3 +63,6 @@ win10 上原生自带截图
 * `Ctrl V` ： 粘贴
 * `Ctrl Z` ： 撤销
 * `Ctrl Y` ： 恢复
+
+</details>
+
