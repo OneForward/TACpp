@@ -1,4 +1,4 @@
-# [EduCoder相关问题汇总【待更新】](https://gitee.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
+# [EduCoder相关问题汇总【待更新】](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/EduCoder.md)
 
 - [EduCoder相关问题汇总【待更新】](#educoder相关问题汇总待更新)
   - [官网](#官网)

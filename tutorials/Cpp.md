@@ -1,4 +1,4 @@
-# [C++编程问题汇总【不断更新】](https://gitee.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
+# [C++编程问题汇总【不断更新】](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/Cpp.md)
 
 > 遇到了任何问题都不要慌张，
 > 1. 上机的时候向助教询问
