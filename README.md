@@ -9,19 +9,19 @@
 
 ## Tutorials
 
- * [Qt的安装与简单使用](https://github.com/OneForward/TACpp/blob/master/tutorials/qt-install.md)
+ * [Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/master/tutorials/qt-install.md)
 
- * [Qt实践-2048游戏](https://github.com/OneForward/TACpp/blob/master/tutorials/qt-2048-v1.md)
+ * [Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/master/tutorials/qt-2048-v1.md)
 
- * [EduCoder相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
+ * [EduCoder相关问题汇总](https://gitee.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
 
- * [CodeBlocks相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
+ * [CodeBlocks相关问题汇总](https://gitee.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
 
  * [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
 
- * [C++编程问题汇总【不断更新】](https://github.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
+ * [C++编程问题汇总【不断更新】](https://gitee.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
 
- * [C++流控制库iomanip与C风格printf的对比](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
+ * [C++流控制库iomanip与C风格printf的对比](https://gitee.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
 
 
 <details>
