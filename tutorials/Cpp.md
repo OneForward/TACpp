@@ -57,7 +57,7 @@ cin.getline(s, sizeof(s));
 6. 读取到终止（即文本的EOF或者命令行的以 Ctrl Z 结束）
 ```cpp
 char ch;
-while ((ch = cin.get()) != EOF); // EOF is a c/c++ macro, EOF = 1
+while ((ch = cin.get()) != EOF); // EOF is a c/c++ macro, EOF = -1
 ```
 
 ## Q & A
