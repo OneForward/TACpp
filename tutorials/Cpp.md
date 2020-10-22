@@ -34,7 +34,7 @@ int *pArr = new int[N] {}; // 在堆上构造一个全部位0的动态数组
 ```cpp
 char ch;
 cin.get(ch);
-// 或者 cin >> ch;
+// 或者 cin >> ch; // 非空白字符
 ```
 
 4. 输入跳过空白的方法 
@@ -48,6 +48,10 @@ char s[80];
 cin.getline(s, sizeof(s)); 
 // cin.getline(s, 80); // 等价
 // cin.getline(s, 80, '\n'); // 等价
+// 虽然此处 cin.getline 全部可以使用 cin.get 替换，但稍有区别，
+// cin.get 遇到'\n'终止时不会消耗掉'\n'，下一次读入还是 '\n'
+// cin.getline 会消耗掉 '\n'，下一次读入是新字符
+// 因此不推荐使用 cin.get
 ```
 
 6. 读取到终止（即文本的EOF或者命令行的以 Ctrl Z 结束）
