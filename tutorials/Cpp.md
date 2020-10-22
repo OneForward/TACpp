@@ -8,9 +8,51 @@
 
 
 - [C++编程问题汇总【不断更新】](#c编程问题汇总不断更新)
+  - [C++ 编程 Tips](#c-编程-tips)
   - [Q & A](#q--a)
   - [C++语法问题](#c语法问题)
   - [变量或者对象的生存期与内存管理](#变量或者对象的生存期与内存管理)
+
+## C++ 编程 Tips 
+
+1. 初始化数组全部为默认值的方法
+
+```cpp
+const int N = 1024;
+int arrA[N] = {}; // 默认全部为 0
+bool arrB[N] = {}; // 默认全部为 false
+char arrC[N] = {}; // 默认全部为 '\0'
+// 或者写一个 for 循环赋值，或者使用 memset
+// C++11之后上述等号也可以全部删掉，甚至还有
+int *pArr = new int[N] {}; // 在堆上构造一个全部位0的动态数组
+```
+
+2. 输入一个字符。
+
+```cpp
+char ch;
+cin.get(ch);
+// 或者 cin >> ch;
+```
+
+3. 输入跳过空白的方法 
+```cpp
+cin >> ws;
+```
+
+4. 读入一行不超过80字符的字符串
+```cpp
+char s[80];
+cin.getline(s, sizeof(s)); 
+// cin.getline(s, 80); // 等价
+// cin.getline(s, 80, '\n'); // 等价
+```
+
+5. 读取到终止（即文本的EOF或者命令行的以 Ctrl Z 结束）
+```cpp
+char ch;
+while ((ch = cin.get()) != EOF); // EOF is a c/c++ macro, EOF = 1
+```
 
 ## Q & A
 #### 1. `int` 和 `short` 都是4字节, 面对一个4字节是否有一个机制能区分它是什么类型（比如存在不同的地方）？
