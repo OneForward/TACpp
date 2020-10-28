@@ -26,7 +26,7 @@ bool arrB[N] = {}; // 默认全部为 false
 char arrC[N] = {}; // 默认全部为 '\0'
 // 或者写一个 for 循环赋值，或者使用 memset
 // C++11之后上述等号也可以全部删掉，甚至还有
-int *pArr = new int[N] {}; // 在堆上构造一个全部位0的动态数组
+int *pArr = new int[N] {}; // 在堆上构造一个全部为0的动态数组
 ```
 
 3. 输入一个字符。
@@ -34,7 +34,7 @@ int *pArr = new int[N] {}; // 在堆上构造一个全部位0的动态数组
 ```cpp
 char ch;
 cin.get(ch);
-// 或者 cin >> ch; // 非空白字符
+// 或者 cin >> ch; // 只能读入非空白字符
 ```
 
 4. 输入跳过空白的方法 
@@ -56,8 +56,37 @@ cin.getline(s, sizeof(s));
 
 6. 读取到终止（即文本的EOF或者命令行的以 Ctrl Z 结束）
 ```cpp
+// 方法1
 char ch;
-while ((ch = cin.get()) != EOF); // EOF is a c/c++ macro, EOF = -1
+while ((ch = cin.get()) != EOF);
+
+// 或者存入数组
+char s[80]; int len = 0;
+while ((s[len++] = cin.get()) != EOF); // EOF is a c/c++ macro, EOF = -1
+```
+
+```cpp
+// 方法2
+char ch;
+while (cin.get(ch));
+
+// 或者存入数组
+char s[80]; int len = 0;
+while (cin.get(s[len++])); 
+```
+
+```cpp
+// 方法3
+// 逐行读入
+cin.getline(s, 80); // 默认情况下遇到 EOF 也会正常结束
+```
+
+```cpp
+// 错误的方法 
+char s[80]; int len = 0;
+while ( !cin.eof() && (s[len++] = cin.get()) != '\n');
+// 会在最后错误地多读一位 EOF, 也就是 -1
+// almostly never use cin.eof()!
 ```
 
 ## Q & A
