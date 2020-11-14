@@ -9,3 +9,6 @@ tutorials/qt-2048.md
 labs/build*
 **.pro.user
 labs/qt-tutorial-release
+# *.in
+# *.out
+*cases
