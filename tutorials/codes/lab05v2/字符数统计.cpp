@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    freopen("cases/字符数统计.in", "r", stdin);
+    // freopen("cases/字符数统计.in", "r", stdin);
 
     int n; cin >> n; cin >> ws;
 

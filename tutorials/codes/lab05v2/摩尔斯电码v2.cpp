@@ -45,7 +45,7 @@ unordered_map<char, string> M = {
 
 int main(int argc, char const *argv[])
 {
-    freopen("cases/摩尔斯电码.in", "r", stdin);
+    // freopen("cases/摩尔斯电码.in", "r", stdin);
 
     const int N = 1000;
     char s[N];

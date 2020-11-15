@@ -12,7 +12,7 @@ bool ispalindrome(char* s, int lft, int rht) {
 
 int main(int argc, char const *argv[])
 {
-    freopen("cases/查找回文字符串.in", "r", stdin);
+    // freopen("cases/查找回文字符串.in", "r", stdin);
 
     const int N = 10005;
     char s[N] {}; size_t len = 0; 

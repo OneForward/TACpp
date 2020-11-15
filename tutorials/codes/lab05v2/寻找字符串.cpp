@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    freopen("cases/寻找字符串.in", "r", stdin);
+    // freopen("cases/寻找字符串.in", "r", stdin);
 
     const int N = 200;
     char s1[N], s2[N];
