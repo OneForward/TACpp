@@ -15,7 +15,6 @@ int main(int argc, char const *argv[])
     size_t len2 = strlen(s2);
     if (len1 < len2 || len2 == 0) { cout << -1; return 0; }
 
-    bool found = false;
     for (size_t start = 0; start <= len1-len2; ++start) { 
         size_t p2 = 0;
         for (p2 = 0; p2 < len2; ++p2) { 
