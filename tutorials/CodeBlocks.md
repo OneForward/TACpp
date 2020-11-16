@@ -18,6 +18,7 @@
     - [5. 首页跳出的 `Tip of the Day` 是什么](#5-首页跳出的-tip-of-the-day-是什么)
     - [6. 如何设置 Debug / 调试器 路径](#6-如何设置-debug--调试器-路径)
     - [7. 侧边栏消失了怎么办？](#7-侧边栏消失了怎么办)
+    - [8. 编译输出栏消失了怎么办？或者我的xxx布局消失了找不到了怎么办？](#8-编译输出栏消失了怎么办或者我的xxx布局消失了找不到了怎么办)
   - [下载 `codeblocks-20.03mingw-setup.exe`](#下载-codeblocks-2003mingw-setupexe)
   - [安装](#安装)
   - [第一次使用](#第一次使用)
@@ -116,6 +117,12 @@
 
 * 视图 -> 管理器, 点击勾选
 ![](imgs/setting-view-manager.png)
+
+### 8. 编译输出栏消失了怎么办？或者我的xxx布局消失了找不到了怎么办？
+
+* 视图->界面外观->删除当前，即可重置你的视图
+
+![](imgs/setting-view-reset.png)
 
 ## 下载 `codeblocks-20.03mingw-setup.exe` 
 
