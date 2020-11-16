@@ -1,5 +1,8 @@
 # [C++编程、问题与细节【不断更新】](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/Cpp.md)
 
+
+[2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
+
 - [C++编程、问题与细节【不断更新】](#c编程问题与细节不断更新)
   - [Something about C++ (2020-11-14)](#something-about-c-2020-11-14)
   - [常见问题汇总(2020-11-15)](#常见问题汇总2020-11-15)

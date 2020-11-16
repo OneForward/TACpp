@@ -6,7 +6,7 @@
 > 3. 微信群里询问
 > 4. 百度搜索你遇到的问题
 
-[2020秋第11周C++课程小结视频(b站)](https://www.bilibili.com/video/BV1mt4y1a71t/)
+[2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
 
 ## Tutorials
 
