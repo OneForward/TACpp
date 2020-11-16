@@ -261,13 +261,13 @@ while ( cin >> s[i] ) i++; // 无法获得空白字符
 // 错误写法2
 char ch; 
 int i = 0; char s[80];
-while ( ch = cin.get() ) s[i++] = ch; // 可能错误读入换行符，错误读入 EOF=-1
+while ( (ch = cin.get()) != EOF ) s[i++] = ch; // 可能错误读入换行符
 ```
 
 ```cpp
 // 错误写法3
 int i = 0; char s[80];
-while ( (s[i] = cin.get()) != '\n' ) i++; // 假如没有换行符，将会错误读入 EOF=-1
+while ( (s[i] = cin.get()) != '\n' ) i++; // 假如没有换行符，将不会停止
 ```
 
 以上代码均有部分问题 
