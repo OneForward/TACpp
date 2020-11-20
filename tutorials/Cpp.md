@@ -4,6 +4,10 @@
 [2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
 
 - [C++编程、问题与细节【不断更新】](#c编程问题与细节不断更新)
+  - [常见问题汇总(2020-11-18)](#常见问题汇总2020-11-18)
+    - [1. 运算符的优先级带来的问题](#1-运算符的优先级带来的问题)
+    - [2. 指针未初始化就解引用](#2-指针未初始化就解引用)
+    - [3. 指针指向的对象已被回收](#3-指针指向的对象已被回收)
   - [Something about C++ (2020-11-14)](#something-about-c-2020-11-14)
   - [常见问题汇总(2020-11-15)](#常见问题汇总2020-11-15)
     - [OJ 评测的文本重定向](#oj-评测的文本重定向)
@@ -40,6 +44,106 @@
     - [函数的参数、返回值与类型签名](#函数的参数返回值与类型签名)
     - [模板类、抽象基类、内嵌类的相关问题](#模板类抽象基类内嵌类的相关问题)
   - [指针，对象的生存期与内存管理](#指针对象的生存期与内存管理)
+
+
+## 常见问题汇总(2020-11-18)
+
+### 1. 运算符的优先级带来的问题
+
+例如
+
+```cpp
+char ch;
+while (ch = cin.get() && ch != '\n'); // 错误写法, 无法终止，且 ch 始终为 1
+```
+
+这个写法的结果是永远不会结束，并且所有 ch 的值都是 整型1 ( '\x1' )
+
+原因是实际赋值的过程是 
+
+```cpp
+ch = (cin.get() && ch != '\n')
+```
+
+注意到 cin.get() 永远不会返回 0（即使文本结束也是返回-1），故 `cin.get()` 为真； 
+而右侧 ch 的值在这种写法下只能为 0 或 1, 故 `ch != '\n'` 为真。
+因此布尔表达式的结果永远是 true，转型赋值给 char 后即为 1。由于 赋值表达式的值是被赋值的结果，此处始终为 1, 故而 while 循环不会结束。
+
+正确的写法如下
+
+```cpp
+char ch;
+while ((ch = cin.get()) && ch != '\n');
+```
+
+### 2. 指针未初始化就解引用
+
+```cpp
+// 错误写法1
+int* p; // p points to random position of memory
+*p = 1; // trouble
+```
+
+```cpp
+// 错误写法2
+int* p;
+p = &1; // compiler error, 取地址运算符只能作用于左值（例如变量）
+```
+
+```cpp
+// 合理写法
+int* p; int x = 1;
+p = &x; // ok , p points to x
+p = new int{1}; // ok, p points to temprary object on the heap
+```
+
+### 3. 指针指向的对象已被回收
+
+```cpp
+// 错误写法1
+int* p; // p points to random position of memory
+delete p; // trouble
+```
+
+```cpp
+// 错误写法2
+int* p; int x = 1;
+p = &x;
+delete p; // delete 和 new 应当相对应出现, delete stack object is undefined behavior(UB)
+cout << x; // trouble
+```
+
+```cpp
+// 错误写法3
+void f() {
+
+    int* p = new int[100]; 
+    delete[] p; 
+
+    // ... wait a while ...
+
+    delete[] p; // error, 不能回收一个已经被回收的内存
+}
+```
+
+
+```cpp
+// 错误写法4
+int* p1 = new int { 99 };
+int* p2 = p1; // potential trouble
+
+
+delete p1; // now p2 doesn’t point to a valid object
+p1 = nullptr; // gives a false sense of safety
+
+
+char* p3 = new char { 'x' };
+
+*p2 = 999; // error, 试图访问已被回收的内存
+
+cout << *p3;
+```
+
 
 ## Something about C++ (2020-11-14)
 
