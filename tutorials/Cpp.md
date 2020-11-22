@@ -8,6 +8,7 @@
     - [1. 运算符的优先级带来的问题](#1-运算符的优先级带来的问题)
     - [2. 指针未初始化就解引用](#2-指针未初始化就解引用)
     - [3. 指针指向的对象已被回收](#3-指针指向的对象已被回收)
+    - [4. 行尾反斜杠](#4-行尾反斜杠)
   - [Something about C++ (2020-11-14)](#something-about-c-2020-11-14)
   - [常见问题汇总(2020-11-15)](#常见问题汇总2020-11-15)
     - [OJ 评测的文本重定向](#oj-评测的文本重定向)
@@ -144,6 +145,24 @@ char* p3 = new char { 'x' };
 cout << *p3;
 ```
 
+### 4. 行尾反斜杠
+
+编译器翻译文本时，当反斜杠出现于行尾（其后紧跟换行符）时，会删除该反斜杠和换行符，将两个物理源码行组合成一个逻辑源码行
+
+https://zh.cppreference.com/w/cpp/language/translation_phases
+
+```cpp
+// someth comment...\
+int x = 0;
+cout << x; 
+```
+
+编译提示
+```cpp
+hello.cpp: In function 'int main()':
+hello.cpp:8:13: error: 'x' was not declared in this scope
+     cout << x;
+```
 
 ## Something about C++ (2020-11-14)
 

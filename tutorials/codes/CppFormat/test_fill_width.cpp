@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
     double num = 4.0; 
     printf( "宽度为10，右对齐：[%10g]\n"

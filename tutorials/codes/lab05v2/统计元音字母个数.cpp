@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
     // freopen("cases/统计元音字母个数.in", "r", stdin);
 

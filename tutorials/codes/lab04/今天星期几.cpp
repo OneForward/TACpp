@@ -22,7 +22,7 @@ int days(int year, int month, int day) {
     return count;
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     int year, month, day;
     // year = 2021, month = 9, day = 28;

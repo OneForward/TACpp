@@ -10,7 +10,7 @@ bool isPerfectNumber(int n){
     return sum == n;
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     int m, n; cin >> m >> n;
     

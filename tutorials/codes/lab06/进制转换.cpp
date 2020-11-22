@@ -13,7 +13,7 @@ void printInt(int x, int B){
     }
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     int n, base; cin >> n >> base;
     

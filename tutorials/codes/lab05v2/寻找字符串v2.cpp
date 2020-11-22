@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
     // freopen("cases/寻找字符串.in", "r", stdin);
 

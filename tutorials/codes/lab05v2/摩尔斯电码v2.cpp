@@ -43,7 +43,7 @@ unordered_map<char, string> M = {
     { '9', "----." },
 };
 
-int main(int argc, char const *argv[])
+int main()
 {
     // freopen("cases/摩尔斯电码.in", "r", stdin);
 

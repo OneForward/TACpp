@@ -10,7 +10,7 @@ bool ispalindrome(char* s, int lft, int rht) {
     return true;
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     // freopen("cases/查找回文字符串.in", "r", stdin);
 

@@ -44,7 +44,7 @@ void bubbleSort(AddressBook* A, int n) {
 
 
 
-int main(int argc, char const *argv[])
+int main()
 {
     int n;
     cin >> n;

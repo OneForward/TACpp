@@ -12,7 +12,7 @@ void bubbleSort(char* A, int n) {
     }
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     // freopen("cases/字符重排序.in", "r", stdin);
 

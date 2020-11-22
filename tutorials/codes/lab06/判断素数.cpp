@@ -10,7 +10,7 @@ bool isPrime(int n){
     return true;
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     int m, n; cin >> m >> n;
     

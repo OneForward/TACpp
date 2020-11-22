@@ -63,7 +63,7 @@ void f() {
     ans.disp();
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     // freopen("in.txt", "r", stdin);
     // auto t_start = std::chrono::high_resolution_clock::now();

@@ -12,4 +12,5 @@ labs/qt-tutorial-release
 # *.in
 # *.out
 *cases
-**/Debug
+Debug
+example

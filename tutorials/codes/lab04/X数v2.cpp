@@ -15,7 +15,7 @@ bool is_x_number(int x)
     return ans == x_copy;
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     bool found = false;
     int a, b; 

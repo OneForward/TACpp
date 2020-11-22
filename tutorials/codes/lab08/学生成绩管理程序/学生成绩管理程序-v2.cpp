@@ -141,7 +141,7 @@ struct StudentManager
 
 
 
-int main(int argc, char const *argv[])
+int main()
 {
     // freopen("lab08_学生成绩管理程序_cases/case_04.in", "r", stdin);
 

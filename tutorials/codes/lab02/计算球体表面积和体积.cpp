@@ -4,7 +4,7 @@ using namespace std;
 
 const double PI = 3.14;
 
-int main(int argc, char const *argv[])
+int main()
 {
     int R; cin >> R;
     printf( "半径为%d的球体积为%.1f\n", R, 4 / 3. * PI * R * R * R );

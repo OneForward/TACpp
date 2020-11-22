@@ -45,7 +45,7 @@ Complex times(Complex lhs, const Complex& rhs)
 
 
 /********* 不需要修改 main 函数 *********/
-int main(int argc, char const *argv[])
+int main()
 {
     Complex x, y;
 

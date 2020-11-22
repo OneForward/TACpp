@@ -2,7 +2,7 @@
 #include <cstring>
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
     // freopen("cases/字符数统计.in", "r", stdin);
 

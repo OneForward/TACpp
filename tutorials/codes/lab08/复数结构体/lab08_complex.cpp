@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int main(int argc, char const *argv[])
+int main()
 {
     Complex x, y;
     cin >> x >> y;

@@ -30,7 +30,7 @@ struct Timer
 
 };
 
-int main(int argc, char const *argv[])
+int main()
 {
     Timer timer;
     int hour, minute, second;

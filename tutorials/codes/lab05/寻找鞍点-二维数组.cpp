@@ -4,7 +4,7 @@ using namespace std;
 
 const int N = 10;
 
-int main(int argc, char const *argv[])
+int main()
 {
     int m, n, A[N][N];
     cin >> m >> n;

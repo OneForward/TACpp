@@ -22,7 +22,7 @@ void print(int x, int B, char end=' ') {
     cout << end;
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     int B; 
     cin >> B;
