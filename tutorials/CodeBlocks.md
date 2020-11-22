@@ -1,5 +1,5 @@
 
-# [CodeBlocks 相关问题汇总](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/CodeBlocks.md)
+# [CodeBlocks 相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
 
 > 遇到了任何问题都不要慌张，
 > 1. 上机的时候向助教询问

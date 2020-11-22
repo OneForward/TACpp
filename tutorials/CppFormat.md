@@ -1,6 +1,6 @@
 # C++ 流控制库 `<iomanip>`  与 C 风格 `printf` 的对比
 
-示例代码在 [test_base.cpp](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/codes/CppFormat/test_base.cpp), [test_fill_width.cpp](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/codes/CppFormat/test_fill_width.cpp)
+示例代码在 [test_base.cpp](https://github.com/OneForward/TACpp/blob/master/tutorials/codes/CppFormat/test_base.cpp), [test_fill_width.cpp](https://github.com/OneForward/TACpp/blob/master/tutorials/codes/CppFormat/test_fill_width.cpp)
 
 - [C++ 流控制库 `<iomanip>`  与 C 风格 `printf` 的对比](#c-流控制库-iomanip--与-c-风格-printf-的对比)
   - [整数 $n$ 进制](#整数-n-进制)
