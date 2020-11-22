@@ -41,6 +41,9 @@
 
 #### 设置文件编码格式
 
+<details>
+  <summary> 设置文件编码格式【点开小三角形查看】 </summary>
+
 * 设置 -> 编辑器
 
 ![](imgs/setting-editor.png)
@@ -49,26 +52,29 @@
 
 ![](imgs/file-encoding.png)
 
+</details>
+
 #### 在编译命令中增加编码格式的设置
 
-* 设置 -> 编译器
+<details>
+  <summary> 在编译命令中增加编码格式的设置【点开小三角形查看】 </summary>
 
-![](imgs/setting-compiler.png)
+第一次使用可能会出现是否要进行 C++/C 源文件关联 CodeBlocks 的提示, 
 
-* 在图中位置添加编码命令，请在以下2种可能的命令中依次尝试
+![](imgs/File%20Association%20提示.png)
 
-```sh
--fexec-charset=gbk
-```
+建议初学者选择 **最后一项**，全部关联。对其他IDE更熟悉的同学则可以根据自己的需求选择。
 
-```sh
--finput-charset=gbk -fexec-charset=gbk
-```
+![](imgs/YesFileAssociation.png)
 
-![](imgs/other-compiler-options.png)
+</details>
 
 
 ### 2. 如何修改编译器类型
+
+<details>
+
+  <summary> 如何修改编译器类型【点开小三角形查看】  </summary>
 
 * Settings-›Compiler
 
@@ -78,7 +84,13 @@
   `
 ![](imgs/select-compiler.png)
 
+</details>
+
 ### 3. 如何设置编译器路径
+
+<details>
+
+  <summary> 如何设置编译器路径【点开小三角形查看】  </summary>
 
 * Settings-›Compiler
 
@@ -88,8 +100,13 @@
   
 ![](imgs/compiler-path.png)
 
+</details>
 
 ### 4. 如何开启 C++11 或者更新的 C++ 标准 
+
+<details>
+
+  <summary> 如何开启 C++11 或者更新的 C++ 标准【点开小三角形查看】  </summary>
 
 * Settings-›Compiler
 
@@ -99,11 +116,18 @@
   
 ![](imgs/select-c++11.png)
 
+</details>
+
 ### 5. 首页跳出的 `Tip of the Day` 是什么
 
 每日小贴士，不用管。如果以后不想看到请去掉底下勾选。
 
 ### 6. 如何设置 Debug / 调试器 路径
+
+<details>
+
+  <summary> 如何设置 Debug / 调试器 路径【点开小三角形查看】  </summary>
+
 
 * Settings->Debugger
 
@@ -113,16 +137,30 @@
 
 ![](imgs/debugger-path.png)
 
+</details>
+
 ### 7. 侧边栏消失了怎么办？
+
+<details>
+
+  <summary> 侧边栏消失了怎么办？【点开小三角形查看】  </summary>
 
 * 视图 -> 管理器, 点击勾选
 ![](imgs/setting-view-manager.png)
 
+</details>
+
 ### 8. 编译输出栏消失了怎么办？或者我的xxx布局消失了找不到了怎么办？
+
+<details>
+
+  <summary> 编译输出栏消失了怎么办？或者我的xxx布局消失了找不到了怎么办？【点开小三角形查看】  </summary>
 
 * 视图->界面外观->删除当前，即可重置你的视图
 
 ![](imgs/setting-view-reset.png)
+
+</details>
 
 ## 下载 `codeblocks-20.03mingw-setup.exe` 
 
@@ -131,6 +169,10 @@
 
 
 ## 安装
+
+
+<details>
+  <summary> 安装【点开小三角形查看】 </summary>
 
 1. 双击安装包 `codeblocks-20.03mingw-setup.exe` 
 
@@ -160,10 +202,17 @@
 
 往后正常使用时，我们可以通过点击桌面的 CodeBlock 快捷键运行。如果启动遇到了问题，可以向助教询问。
 
+</details>
+
 ## 第一次使用
 
 ### 文件关联 CodeBlocks 的提示
-第一次使用可能会出现是否要进行 C++/C 源文件关联 CodeBlocks 的提示, 
+
+
+<details>
+  <summary> 文件关联 CodeBlocks 的提示【点开小三角形查看】 </summary>
+
+  第一次使用可能会出现是否要进行 C++/C 源文件关联 CodeBlocks 的提示, 
 
 ![](imgs/File%20Association%20提示.png)
 
@@ -171,7 +220,15 @@
 
 ![](imgs/YesFileAssociation.png)
 
+</details>
+
+
 ### 新建一个C++项目
+
+
+
+<details>
+  <summary> 新建一个C++项目【点开小三角形查看】 </summary>
 
 现在，我们来新建一个 C++ 命令行项目，
 
@@ -219,7 +276,14 @@
 
 > 以后我们每一次作业，都可以按照上述 1-8 的步骤进行。步骤3 选择了 Skip 之后以后可以跳过。新建项目遇到了任何问题都请及时向助教询问。
 
+
+</details>
+
+
 ## CodeBlocks 如何进行简单的代码调试 / Debug ?
+
+<details>
+  <summary> CodeBlocks 如何进行简单的代码调试 / Debug【点开小三角形查看】 </summary>
 
 Debug 的功能：
 
@@ -275,15 +339,21 @@ int main()
 
 ![](imgs/DebugEnd.png)
 
+</details>
+
+
 ## 汉化
 
 ### 汉化包链接
 
-[交大云盘](https://jbox.sjtu.edu.cn/l/Ou6oNv)
+汉化包请点击 [交大云盘](https://jbox.sjtu.edu.cn/l/Ou6oNv) 下载
 
 汉化包是一个名为 `locale.zip` 的压缩包
 
 ### 解压汉化包
+
+<details>
+  <summary> 解压汉化包【点开小三角形查看】 </summary>
 
 首先找到你们的 `CodeBlocks` 的安装位置，点进 `share` 文件夹
 
@@ -301,7 +371,12 @@ int main()
 
 ![](imgs/zh_CN_final.png)
 
+</details>
+
 ### 配置CodeBlocks
+
+<details>
+  <summary> 配置CodeBlocks【点开小三角形查看】 </summary>
 
 * 打开 CodeBlocks, 点击 Settings->Environment
 
@@ -320,5 +395,7 @@ int main()
 * 重启 CodeBlocks 即可看到汉化效果
 
 ![](imgs/zh_CN_result.png)
+
+</details>
 
 
