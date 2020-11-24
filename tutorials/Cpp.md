@@ -8,7 +8,8 @@
     - [1. 运算符的优先级带来的问题](#1-运算符的优先级带来的问题)
     - [2. 指针未初始化就解引用](#2-指针未初始化就解引用)
     - [3. 指针指向的对象已被回收](#3-指针指向的对象已被回收)
-    - [4. 行尾反斜杠](#4-行尾反斜杠)
+    - [4. const pointer, pointer to constant](#4-const-pointer-pointer-to-constant)
+    - [5. 行尾反斜杠](#5-行尾反斜杠)
   - [Something about C++ (2020-11-14)](#something-about-c-2020-11-14)
   - [常见问题汇总(2020-11-15)](#常见问题汇总2020-11-15)
     - [OJ 评测的文本重定向](#oj-评测的文本重定向)
@@ -145,7 +146,36 @@ char* p3 = new char { 'x' };
 cout << *p3;
 ```
 
-### 4. 行尾反斜杠
+### 4. const pointer, pointer to constant
+
+* `const char* p`; 叫做 `pointer to const char`, 意思是 p 指向的对象不可变
+* `char* const p`; 叫做 `const pointer to char`，意思是 p 不可变，但 p 指向的对象的值可以变( 例如 p 不可以自加，但是 *p 可以改值 )
+* `const char * const p`; 叫做 `const pointer to const char` ;  二者都不可变
+
+```cpp
+void f1(char *p)
+{
+    char s[] = "Gorm";
+    const char *pc = s;        // pointer to constant
+    pc[3] = 'g';               // error : pc points to constant
+    pc = p;                    // OK
+    char *const cp = s;        // constant pointer
+    cp[3] = 'a';               // OK
+    cp = p;                    // error : cp is constant
+    const char *const cpc = s; // const pointer to const
+    cpc[3] = 'a';              // error : cpc points to constant
+    cpc = p;                   // error : cpc is constant
+}
+
+int count_length(const char *s)
+{
+    int len = 0;
+    while (*s) len++, s++; // ok, 
+    return len;
+}
+```
+
+### 5. 行尾反斜杠
 
 编译器翻译文本时，当反斜杠出现于行尾（其后紧跟换行符）时，会删除该反斜杠和换行符，将两个物理源码行组合成一个逻辑源码行
 
@@ -286,7 +316,14 @@ cin.get(ch);
 
 ### 4. 输入跳过空白的方法 
 ```cpp
+// 方法1
 cin >> ws;
+```
+
+```cpp
+// 方法2，不推荐
+cin.clear();
+cin.ignore(100, '\n'); // 忽略字符流(至多忽略100个字符)，直到遇到换行符，消耗掉换行符并继续
 ```
 
 ### 5. 读入一行不超过80字符的字符串
