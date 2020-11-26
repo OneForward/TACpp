@@ -11,22 +11,23 @@ struct Matrix
     void disp() {
         printf("%lld %lld\n%lld %lld\n", a, b, c, d);
     }
-};
 
-Matrix times(const Matrix& lft, const Matrix& rht) {
-    long long a = ((lft.a * rht.a + lft.b * rht.c) % MOD + MOD) % MOD;
-    long long b = ((lft.a * rht.b + lft.b * rht.d) % MOD + MOD) % MOD;
-    long long c = ((lft.c * rht.a + lft.d * rht.c) % MOD + MOD) % MOD;
-    long long d = ((lft.c * rht.b + lft.d * rht.d) % MOD + MOD) % MOD;
-    return Matrix{a, b, c, d};
-}
+    Matrix& operator*=(const Matrix& rht) {
+        long long a = ((this->a * rht.a + this->b * rht.c) % MOD + MOD) % MOD;
+        long long b = ((this->a * rht.b + this->b * rht.d) % MOD + MOD) % MOD;
+        long long c = ((this->c * rht.a + this->d * rht.c) % MOD + MOD) % MOD;
+        long long d = ((this->c * rht.b + this->d * rht.d) % MOD + MOD) % MOD;
+        *this = {a, b, c, d};
+        return *this;
+    }
+};
 
 Matrix fpower(Matrix x, long long n) {
     Matrix ans {1, 0, 0, 1}; // C++11 initializer list
     
     while (n) { 
-        if (n % 2) ans = times(ans, x);
-        x = times(x, x);
+        if (n % 2) ans *= x;
+        x *= x;
         n /= 2;
     }
     return ans;
@@ -35,6 +36,8 @@ Matrix fpower(Matrix x, long long n) {
 
 int main()
 {
+    freopen("in.txt", "r", stdin);
+    
     long long n; cin >> n;
     long long a, b, c, d; cin >> a >> b >> c >> d;
 
