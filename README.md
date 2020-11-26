@@ -6,11 +6,19 @@
 
  * [C++编程、问题与细节【不断更新】](https://github.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
  
- * [作业答案](https://github.com/OneForward/TACpp/blob/master/tutorials/codes/README.md)
+  * [C++流控制库iomanip与C风格printf的对比](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
+
+
+## HomeWork
+
+* [作业答案](https://github.com/OneForward/TACpp/blob/master/tutorials/codes/README.md)
 
  * [Qt的安装与简单使用](https://github.com/OneForward/TACpp/blob/master/tutorials/qt-install.md)
 
  * [Qt实践-2048游戏](https://github.com/OneForward/TACpp/blob/master/tutorials/qt-2048-v1.md)
+
+
+## Misc
 
  * [CodeBlocks相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/CodeBlocks.md)
 
@@ -18,7 +26,7 @@
 
  * [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
 
- * [C++流控制库iomanip与C风格printf的对比](https://github.com/OneForward/TACpp/blob/master/tutorials/CppFormat.md)
+
 
 
 <details>
