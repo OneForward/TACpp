@@ -1,22 +1,24 @@
 # C++ 程序设计学习指导【不断更新】
 
-> 遇到了任何问题都不要慌张，
-> 1. 上机的时候向助教询问
-> 2. QQ群里主动提问或者私聊助教询问
-> 3. 微信群里询问
-> 4. 百度搜索你遇到的问题
-
 [2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
 
 ## Tutorials
 
  * [C++编程、问题与细节【不断更新】](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/Cpp.md)
  
- * [作业答案](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/codes/README.md)
+  * [C++流控制库iomanip与C风格printf的对比](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/CppFormat.md)
+
+
+## HomeWork
+
+* [作业答案](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/codes/README.md)
 
  * [Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
 
  * [Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
+
+
+## Misc
 
  * [CodeBlocks相关问题汇总](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/CodeBlocks.md)
 
@@ -24,7 +26,7 @@
 
  * [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
 
- * [C++流控制库iomanip与C风格printf的对比](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/CppFormat.md)
+
 
 
 <details>
