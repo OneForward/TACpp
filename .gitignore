@@ -14,3 +14,8 @@ labs/qt-tutorial-release
 *cases
 Debug
 example
+# in.txt
+out.txt
+*.exe
+!tutorials/codes/答疑1/cases
+!tutorials/codes/答疑2/cases
