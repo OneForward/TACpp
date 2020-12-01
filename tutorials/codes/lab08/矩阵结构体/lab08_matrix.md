@@ -23,7 +23,7 @@ $$AB_{i,j}= A_{i,1}B_{1,j} + A_{i,2}B_{2,j} + \cdots + A_{i,n}B_{n,j} = \sum_{r=
 例如
 $$\begin{bmatrix} 1 & 0 & 2 \\\\ -1 & 3 & 1 \\\\  \end{bmatrix} \times \begin{bmatrix} 3 & 1 \\\\  2 & 1 \\\\  1 & 0 \end{bmatrix} = \begin{bmatrix} (1 \times 3  +  0 \times 2  +  2 \times 1) & (1 \times 1   +   0 \times 1   +   2 \times 0) \\\\ (-1 \times 3  +  3 \times 2  +  1 \times 1) & (-1 \times 1   +   3 \times 1   +   1 \times 0) \\\\  \end{bmatrix} = \begin{bmatrix} 5 & 1 \\\\ 4 & 2 \\\\ \end{bmatrix}$$
 
-现在请你设计一个 $$2 \times 2$$ 的矩阵结构体，然后计算一个矩阵 $$A$$ 的 $$n$$ 次幂。为了避免整型溢出，请输出矩阵中每个元素模 $$10^9+7$$ 后的结果。
+现在请你设计一个 $$2 \times 2$$ 的矩阵结构体，然后计算一个矩阵 $$A$$ 的 $$n$$ 次幂。为了避免整型溢出，请输出矩阵中每个元素模 $$1000000007 (=10^9+7)$$ 后的结果。
 
 
 
@@ -32,7 +32,7 @@ $$\begin{bmatrix} 1 & 0 & 2 \\\\ -1 & 3 & 1 \\\\  \end{bmatrix} \times \begin{bm
 输入描述：一个整数 $$n$$ 代表幂次；四个整型 $$a, b, c ,d$$ ，分别代表矩阵 $$A$$ 的四个元素。
 $$A = \begin{pmatrix}a & b \\\\ c & d \end{pmatrix}$$
 
-输出描述： $$A^n$$ 中每个元素模$$10^9+7$$ 后的结果。
+输出描述： $$A^n$$ 中每个元素模 $$1000000007 (=10^9+7)$$ 后的结果。
 
 样例1：
 
