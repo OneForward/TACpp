@@ -166,9 +166,9 @@
 
 ### 9. CodeBlocks 如何添加多文件到项目中？
 
-<details>
+<!-- <details> -->
 
-  <summary> CodeBlocks 如何添加多文件到项目中？【点开小三角形查看】  </summary>
+  <!-- <summary> CodeBlocks 如何添加多文件到项目中？【点开小三角形查看】  </summary> -->
 
 ![](imgs/add-headers-v1.png)
 
@@ -176,16 +176,20 @@
 
 ![](imgs/add-headers-v3.png)
 
+- 设置头文件名
+
 ![](imgs/add-headers-v4.png)
 
 ![](imgs/add-headers-v5.png)
+
+- 点击完成即可
 
 ![](imgs/add-headers-v6.png)
 
 ![](imgs/add-headers-v7.png)
 
 
-</details>
+<!-- </details> -->
 
 
 
