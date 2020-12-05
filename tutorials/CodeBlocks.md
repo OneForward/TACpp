@@ -19,6 +19,7 @@
     - [6. 如何设置 Debug / 调试器 路径](#6-如何设置-debug--调试器-路径)
     - [7. 侧边栏消失了怎么办？](#7-侧边栏消失了怎么办)
     - [8. 编译输出栏消失了怎么办？或者我的xxx布局消失了找不到了怎么办？](#8-编译输出栏消失了怎么办或者我的xxx布局消失了找不到了怎么办)
+    - [9. CodeBlocks 如何添加多文件到项目中？](#9-codeblocks-如何添加多文件到项目中)
   - [下载 `codeblocks-20.03mingw-setup.exe`](#下载-codeblocks-2003mingw-setupexe)
   - [安装](#安装)
   - [第一次使用](#第一次使用)
@@ -161,6 +162,34 @@
 ![](imgs/setting-view-reset.png)
 
 </details>
+
+
+### 9. CodeBlocks 如何添加多文件到项目中？
+
+<details>
+
+  <summary> CodeBlocks 如何添加多文件到项目中？【点开小三角形查看】  </summary>
+
+![](imgs/add-headers-v1.png)
+
+![](imgs/add-headers-v2.png)
+
+![](imgs/add-headers-v3.png)
+
+![](imgs/add-headers-v4.png)
+
+![](imgs/add-headers-v5.png)
+
+![](imgs/add-headers-v6.png)
+
+![](imgs/add-headers-v7.png)
+
+
+</details>
+
+
+
+
 
 ## 下载 `codeblocks-20.03mingw-setup.exe` 
 
