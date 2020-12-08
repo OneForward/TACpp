@@ -1,14 +1,5 @@
 # C++ 程序设计学习指导【不断更新】
 
-- [C++ 程序设计学习指导【不断更新】](#c-程序设计学习指导不断更新)
-  - [Tutorials](#tutorials)
-  - [HomeWork](#homework)
-  - [Misc](#misc)
-    - [1. ftp](#1-ftp)
-    - [2. 如何截图](#2-如何截图)
-    - [3. 什么是文件的后缀名？](#3-什么是文件的后缀名)
-    - [4. 有哪些常用的快捷键](#4-有哪些常用的快捷键)
-
 [2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
 
 ## Tutorials
@@ -38,9 +29,9 @@
 
 
 
-<details>
-  <summary> Q & A  </summary>
-
+<!-- <details>
+  <summary> Q & A  </summary> -->
+## Q & A
 ### 1. ftp
 
 如何使用 ftp?
@@ -80,5 +71,5 @@ win10 上原生自带截图
 * `Ctrl Z` ： 撤销
 * `Ctrl Y` ： 恢复
 
-</details>
+<!-- </details> -->
 
