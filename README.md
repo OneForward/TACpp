@@ -1,5 +1,14 @@
 # C++ 程序设计学习指导【不断更新】
 
+- [C++ 程序设计学习指导【不断更新】](#c-程序设计学习指导不断更新)
+  - [Tutorials](#tutorials)
+  - [HomeWork](#homework)
+  - [Misc](#misc)
+    - [1. ftp](#1-ftp)
+    - [2. 如何截图](#2-如何截图)
+    - [3. 什么是文件的后缀名？](#3-什么是文件的后缀名)
+    - [4. 有哪些常用的快捷键](#4-有哪些常用的快捷键)
+
 [2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
 
 ## Tutorials
@@ -32,7 +41,9 @@
 <details>
   <summary> Q & A  </summary>
 
-### 1. 如何登陆 ftp
+### 1. ftp
+
+如何使用 ftp?
 
 电脑上输入 `win` + `e` 打开资源管理器(其中win键是一个形状像“田”的键)，然后在快速访问中输入ftp地址，例如 ftp://public.sjtu.edu.cn ，之后输入账号密码即可。一般不要勾选保存密码。
 
