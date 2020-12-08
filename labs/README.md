@@ -1,4 +1,4 @@
-# Qt编程项目作业[https://gitee.com/OneForward/TACpp/blob/gitee/labs/README.md]
+# [Qt编程项目作业](https://gitee.com/OneForward/TACpp/blob/gitee/labs/README.md)
 
 Qt 项目遵循自愿原则，不做强求。
 
