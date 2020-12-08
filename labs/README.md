@@ -19,4 +19,7 @@ ftp://public.sjtu.edu.cn
 
 ftp 的使用可以参考 https://gitee.com/OneForward/TACpp/blob/gitee/README.md#1-ftp
 
-录制视频可以考虑使用**EV录屏软件**，或者如果 windows 安装了 XBOX Game Bar 后可以使用 `win alt R` 快捷键录制。
+录制视频可以考虑使用
+
+- **EV录屏软件**，或者
+- 如果 windows 安装了 XBOX Game Bar 后可以使用 `win alt R` 快捷键录制。
