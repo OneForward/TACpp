@@ -16,7 +16,7 @@ struct Logo
         if (op == 1) direction = UP;
         if (op == 2) direction = DOWN;
         if (op == 3) direction = (DIRECTION)((direction + 1) % 4 );
-        if (op == 4) direction = (DIRECTION)((direction - 1) % 4 );
+        if (op == 4) direction = (DIRECTION)((direction + 3) % 4 );
     }
 
     void move() {
