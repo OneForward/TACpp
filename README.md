@@ -9,7 +9,7 @@
 
 ## Qt项目 
 
-* [学生Qt项目展示](https://gitee.com/OneForward/QtGallery)
+* [学生Qt项目代码合集](https://gitee.com/OneForward/QtGallery)
 
  * [Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
 
