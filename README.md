@@ -1,6 +1,19 @@
 # C++ 程序设计学习指导【不断更新】
 
-[2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
+## 视频
+
+* [学生Qt项目展示(b站视频)](https://www.bilibili.com/video/BV1Hr4y1T7y1)
+
+* [2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
+
+
+## Qt项目 
+
+* [学生Qt项目展示](https://gitee.com/OneForward/QtGallery)
+
+ * [Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
+
+ * [Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
 
 ## Tutorials
 
@@ -12,10 +25,6 @@
 ## HomeWork
 
 * [作业答案](https://gitee.com/OneForward/TACpp/blob/gitee/codes/README.md)
-
- * [Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
-
- * [Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
 
 
 ## Misc
