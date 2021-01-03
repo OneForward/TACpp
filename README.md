@@ -11,7 +11,7 @@
 
 ## HomeWork
 
-* [作业答案](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/codes/README.md)
+* [作业答案](https://gitee.com/OneForward/TACpp/blob/gitee/codes/README.md)
 
  * [Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
 
