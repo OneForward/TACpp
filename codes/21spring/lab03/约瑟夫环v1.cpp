@@ -14,11 +14,9 @@ int lastRemaining(int N, int M) {
     for (int i = N-1; i >= 1; --i) p = new Node{i, p};
     head->next = p; p = head;
     
-    int len = N; 
-    while (len > 1) { 
+    for (int len = N; len > 1; --len) { 
         for (int i = 0; i < (M - 1) % len; ++i) p = p->next;
         p->next = p->next->next;
-        len--;
     }
     return p->val;
 }
