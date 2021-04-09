@@ -3,7 +3,7 @@ using namespace std;
 
 template<class T>
 T findKmax( T*  A, int n, int k) {
-    // O(NK), 选择排序
+    // 选择排序; 平均, 最坏: O(NK)
     for (int i = 0; i < k; i++) {
         for(int j = i + 1; j < n; j++){
             if (A[j] > A[i])  swap(A[j], A[i]);
@@ -28,7 +28,7 @@ int partition(T* A, int lft, int rht) {
 
 template<class T>
 T findKmax(T* A, int lft, int rht, int k) {
-    // 平均意义 O(N), 最坏 O(N^2)
+    // 分治; 平均意义 O(N), 最坏 O(N^2)
     auto mid = partition(A, lft, rht);
     if (mid - lft == k-1) return A[mid];
     if (mid - lft >= k) return findKmax(A, lft, mid-1, k);

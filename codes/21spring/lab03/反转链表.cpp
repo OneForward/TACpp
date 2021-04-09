@@ -9,14 +9,19 @@ struct ListNode {
 
 
 ListNode* reverseList(ListNode* head) {
-    /********* Begin *************/
-    ListNode* prev = NULL, *curr = head, *next;
+    
+    ListNode* prev = nullptr, *curr = head;
+
     while (curr) {
-        next = curr->next; curr->next = prev;
+        auto next = curr->next; 
+
+        curr->next = prev;
+
         prev = curr; curr = next;
     }
+
     return prev;
-    /********* End *************/
+
 }
 
 

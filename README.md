@@ -1,5 +1,12 @@
 # C++ 程序设计学习指导【不断更新】
 
+
+## HomeWork
+
+* [2020秋C++作业答案](https://gitee.com/OneForward/TACpp/blob/gitee/codes/20fall/README.md)
+* [2021春数据结构作业答案](https://gitee.com/OneForward/TACpp/blob/gitee/codes/21spring/README.md)
+
+
 ## 视频
 
 * [学生Qt项目展示(b站视频)](https://www.bilibili.com/video/BV1Hr4y1T7y1)
@@ -11,29 +18,26 @@
 
 * [学生Qt项目代码合集](https://gitee.com/OneForward/QtGallery)
 
- * [Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
+* [Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
 
- * [Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
+* [Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
 
 ## Tutorials
 
- * [C++编程、问题与细节【不断更新】](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/Cpp.md)
- 
-  * [C++流控制库iomanip与C风格printf的对比](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/CppFormat.md)
+* [C++编程、问题与细节【不断更新】](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/Cpp.md)
+
+* [C++流控制库iomanip与C风格printf的对比](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/CppFormat.md)
 
 
-## HomeWork
-
-* [作业答案](https://gitee.com/OneForward/TACpp/blob/gitee/codes/README.md)
 
 
 ## Misc
 
- * [CodeBlocks相关问题汇总](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/CodeBlocks.md)
+* [CodeBlocks相关问题汇总](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/CodeBlocks.md)
 
- * [EduCoder相关问题汇总](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/EduCoder.md)
+* [EduCoder相关问题汇总](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/EduCoder.md)
 
- * [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
+* [(Optional)在MacOS上使用VS Code配置C++环境](https://code.visualstudio.com/docs/cpp/config-clang-mac)
 
 
 
