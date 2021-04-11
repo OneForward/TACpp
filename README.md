@@ -12,6 +12,7 @@
 * [学生Qt项目展示(b站视频)](https://www.bilibili.com/video/BV1Hr4y1T7y1)
 
 * [2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
+* [2021-04-10-数据结构课程答疑(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
 
 
 ## Qt项目 
