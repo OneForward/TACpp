@@ -4,6 +4,8 @@
 [2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
 
 - [C++编程、问题与细节【不断更新】](#c编程问题与细节不断更新)
+  - [常见问题汇总(2021-04-18)](#常见问题汇总2021-04-18)
+    - [什么时候需要显示地调用析构函数?](#什么时候需要显示地调用析构函数)
   - [多文件的经典问题](#多文件的经典问题)
     - [模板类、抽象基类、内嵌类的相关问题](#模板类抽象基类内嵌类的相关问题)
   - [指针，对象的生存期与内存管理](#指针对象的生存期与内存管理)
@@ -50,6 +52,31 @@
     - [引入头文件、声明、赋值相关问题](#引入头文件声明赋值相关问题)
     - [`cin` 相关的问题](#cin-相关的问题)
     - [函数的参数、返回值与类型签名](#函数的参数返回值与类型签名)
+
+## 常见问题汇总(2021-04-18)
+
+### 什么时候需要显示地调用析构函数?
+
+绝大多数时候都请不要显示地调用析构函数，可能出现 runtime error (对象内部成员的内存空间被试图重复回收，引起 内存异常的 中断)。
+
+
+```cpp
+struct A
+{
+    int* data;
+    A(): data{new int[100]}{}
+    ~A() { delete [] data; }
+};
+
+A a;
+// a.~A(); // error, a is stack object which will be destroyed implicitly; thus, a.data might be destroyed twice
+
+
+{
+    A* a = new A;
+    a->~A(); // ok, the object a points to resides on heap and should be destroyed explicitly
+}
+```
 
 ## 多文件的经典问题
 
