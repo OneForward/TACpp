@@ -4,10 +4,18 @@
 [2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
 
 - [C++编程、问题与细节【不断更新】](#c编程问题与细节不断更新)
+  - [常见问题汇总(2021-04-18)](#常见问题汇总2021-04-18)
+    - [什么时候需要显示地调用析构函数?](#什么时候需要显示地调用析构函数)
+  - [多文件的经典问题](#多文件的经典问题)
+    - [模板类、抽象基类、内嵌类的相关问题](#模板类抽象基类内嵌类的相关问题)
+  - [指针，对象的生存期与内存管理](#指针对象的生存期与内存管理)
+  - [常见问题汇总(2020-11-26)](#常见问题汇总2020-11-26)
+    - [未定义行为(Undefined Behavior, UB)](#未定义行为undefined-behavior-ub)
+  - [C++ 中的一些内置函数的用法](#c-中的一些内置函数的用法)
   - [常见问题汇总(2020-11-18)](#常见问题汇总2020-11-18)
     - [1. 运算符的优先级带来的问题](#1-运算符的优先级带来的问题)
-    - [2. 指针未初始化就解引用](#2-指针未初始化就解引用)
-    - [3. 指针指向的对象已被回收](#3-指针指向的对象已被回收)
+    - [2. 指针未指向合法内存位置就访问](#2-指针未指向合法内存位置就访问)
+    - [3. 指针回收相关](#3-指针回收相关)
     - [4. const pointer, pointer to constant](#4-const-pointer-pointer-to-constant)
     - [5. 行尾反斜杠](#5-行尾反斜杠)
   - [Something about C++ (2020-11-14)](#something-about-c-2020-11-14)
@@ -44,8 +52,224 @@
     - [引入头文件、声明、赋值相关问题](#引入头文件声明赋值相关问题)
     - [`cin` 相关的问题](#cin-相关的问题)
     - [函数的参数、返回值与类型签名](#函数的参数返回值与类型签名)
-    - [模板类、抽象基类、内嵌类的相关问题](#模板类抽象基类内嵌类的相关问题)
-  - [指针，对象的生存期与内存管理](#指针对象的生存期与内存管理)
+
+## 常见问题汇总(2021-04-18)
+
+### 什么时候需要显示地调用析构函数?
+
+绝大多数时候都请不要显示地调用析构函数，可能出现 runtime error (对象内部成员的内存空间被试图重复回收，引起 内存异常的 中断)。
+
+
+```cpp
+struct A
+{
+    int* data;
+    A(): data{new int[100]}{}
+    ~A() { delete [] data; }
+};
+
+A a;
+// a.~A(); // error, a is stack object which will be destroyed implicitly; thus, a.data might be destroyed twice
+
+
+{
+    A* a = new A;
+    a->~A(); // ok, the object a points to resides on heap and should be destroyed explicitly
+}
+```
+
+## 多文件的经典问题
+
+同学们，这里是两个多文件的经典问题
+
+#### 1. 引入头文件忽略了 使用 `std` 命名空间，例如
+
+![](imgs/forget_std.jpg)
+
+这里要么使用 `std::ostream` ，要么引入 `std` 命名空间
+
+#### 2. 头文件里面声明了某些函数，但是没有在相应的.cpp文件里实现这些函数，会提示 `undefined reference`
+
+例如
+
+![undefined_reference](imgs/undefined_ref.jpg)
+
+这里的错误的原因是头文件里面声明了析构函数，但作者忘记了实现它（头文件里面不写明的话编译器则会帮你实现）
+
+> 同时要注意函数声明与定义时的签名是否一致。见 [函数的参数、返回值与类型签名](#函数的参数返回值与类型签名)
+
+> 另一种可能是模板类的实现和声明分开来写，也会出现 `undefined reference`，如下一小节所讲述的。
+
+### 模板类、抽象基类、内嵌类的相关问题
+
+- 一般建议模板类的实现和声明写在同一个文件里，不分开成两个文件写。
+
+ 很多同学问过这个问题。例如
+
+```c++
+// file Array.h
+template<class T> class Array {
+	T* data;
+	int capacity;
+public:
+	Array(int capacity=10);
+};
+```
+
+```c++
+// file Array.cpp
+
+#include "Array.h"
+template<class T> Array<T>::Array(int capacity) {
+	data = new T[capacity];
+}
+```
+
+```c++
+// file main.cpp
+
+#include "Array.h"
+int main() {
+	Array<int> A; // failed!
+}
+```
+
+这里错误的原因时编译的时候每个`.cpp`是独立编译然后链接的。头文件不会被编译，只会做预处理，然后附在 `.cpp`编译后的文件中。因此编译 `main.cpp` 的时候只看见头文件，没有看见实现，也就不知道模板实例如何实现。最终导致 `main.exe` 调用时找不到模板实例的实现。有两种解决方法
+
+1. 将Array的实现和声明都写在一个头文件里，这样 `main` 就可以看到模板实现了。
+
+2. 在实现中显示地添加需要的模板实例，例如
+
+   ```c++
+   // file Array.cpp
+   
+   #include "Array.h"
+   template<class T> Array<T>::Array(int capacity) {
+   	data = new T[capacity];
+   }
+   
+   template class Array<int>; // 显示添加模板实例
+   ```
+
+- 继承抽象基类时，没有将该抽象基类所有的纯虚成员重新实现。
+
+  ```c++
+  class List {
+  public:
+      virtual int size() const = 0; // pure virtual function 
+      virtual ˜List() {} // destructor 
+  };
+
+  class Stack: public List {
+  public:
+      // 忘记定义和实现 int size() const ...
+  };
+  ```
+
+
+
+- 定义某个继承类时，基类必须已经实现，且继承类应在定义时实现。
+
+  ```c++
+  struct List; 
+  strcut LinkList: public List {}; // 错误，基类没有实现
+  ```
+
+  ```c++
+  struct List {}; 
+  strcut LinkList: public List; // 错误，继承类没有在定义处实现
+  ```
+
+- 访问内嵌类。
+
+  ```c++
+  struct List {
+      struct Node { };
+  };
+  
+  typename List::Node* pNode = new typename List::Node;
+  ```
+  
+  
+  
+
+
+## 指针，对象的生存期与内存管理
+
+- 变量或者对象的值没有初始化，或者类内某些成员没有初始化。
+- 对象delete后没有将对应的指针赋值为`nullptr`或`NULL`，造成后续的判空问题。
+- 定义数组时，数组大小使用变量。
+- 数组没有初始化却被访问。（可能引发**SIGSEGV**内存异常的中断）
+- 数组越界访问。（可能引发**SIGSEGV**中断）
+
+```c++
+int N; cin >> N; int arr[N];  // 错误，数组大小不应该使用变量。这样的处理方式可能会有内存问题。
+
+class List {
+    ...
+public:
+    ...
+    int getMax() const {
+        int max; // max 忘记初始化
+        for ...
+    }
+};
+
+int* data = new int[255];
+visit(data[0]); // 没有初始化直接访问 data 数据
+
+
+int* ptr = new int;
+delete ptr; // delete后忘记置NULL
+if (ptr == nullptr) { // 无法进入该分支
+    ...
+}
+```
+
+
+
+- 指针没有`new`就访问。此时指针值是随机值或者`NULL`，访问该位置的内存会引发**SIGSEGV**中断。
+
+- 指针`delete`后再被访问或者再试图`delete`。此时指针值所在的内存位置已经没有对象，任何访问都将引发**SIGSEGV**中断。
+
+  **对象在生存期内，可能被多个指针共享**。假如这些指针都是只读的(read-only)，则一点问题没有。但假若某个指针在某个地方对对象进行了写操作或者删除了对象，新手容易遗忘这件事，然后在别地方使用别的指针操作该对象时出错。
+
+- 指针`new`完再`new`，程序没有记住第一次`new`出来的对象的地址，造成原来的对象悬浮。指针`new`完没有`delete`，这个对象会一直占用内存位置，直到程序结束时由系统回收。
+
+  不过目前而言，这里只会造成内存浪费，对运行不影响。
+
+```c++
+int* p; // p points to random position of memory
+*p = 1; // trouble
+
+
+int* p1 = new int{99};
+int* p2 = p1; // potential trouble
+delete p1; // now p2 doesn’t point to a valid object
+p1 = nullptr; // gives a false sense of safety
+*p2 = 999; // this may cause trouble
+
+
+int* p3 = new int{99}; // object1
+p3 = new int{99}; // p3 points to object2, and object1 is dangling
+```
+
+
+## 常见问题汇总(2020-11-26)
+
+### 未定义行为(Undefined Behavior, UB)
+
+```cpp
+int i = 1;
+i = i+++i; // UB, 不同的编译器给出的结果不同
+```
+
+请严格避免 UB。
+
+
+## C++ 中的一些内置函数的用法
+
+[C++ 中的一些内置函数的用法](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/CppFuncs.md)
 
 
 ## 常见问题汇总(2020-11-18)
@@ -67,18 +291,31 @@ while (ch = cin.get() && ch != '\n'); // 错误写法, 无法终止，且 ch 始
 ch = (cin.get() && ch != '\n')
 ```
 
-注意到 cin.get() 永远不会返回 0（即使文本结束也是返回-1），故 `cin.get()` 为真； 
+注意到 `cin.get()` 永远不会返回 0（即使文本结束也是返回-1），故 `cin.get()` 为真； 
 而右侧 ch 的值在这种写法下只能为 0 或 1, 故 `ch != '\n'` 为真。
 因此布尔表达式的结果永远是 true，转型赋值给 char 后即为 1。由于 赋值表达式的值是被赋值的结果，此处始终为 1, 故而 while 循环不会结束。
 
-正确的写法如下
+直接修改如下
 
 ```cpp
 char ch;
-while ((ch = cin.get()) && ch != '\n');
+while ((ch = cin.get()) && ch != '\n'); // 仍有问题，如果输入没有 换行符则无法结束
 ```
 
-### 2. 指针未初始化就解引用
+```cpp
+char ch;
+while ((ch = cin.get()) && ch != -1); // 仍有问题，可能输入了不需要的换行符 \n
+```
+
+正确写法
+
+```cpp
+char ch;
+while ((cin.get(ch)) && ch != '\n'); // ok
+```
+
+### 2. 指针未指向合法内存位置就访问
+
 
 ```cpp
 // 错误写法1
@@ -99,7 +336,23 @@ p = &x; // ok , p points to x
 p = new int{1}; // ok, p points to temprary object on the heap
 ```
 
-### 3. 指针指向的对象已被回收
+
+- 案例 1 
+  ```cpp
+  char* s;
+  strcpy(s, "SJTU"); // 错误, s 没有指向合法位置
+  ```
+- 案例 2
+
+  ```cpp
+  // 获取一行字符串
+  char* s;
+  cin.getline(s, 80); // 错误，s 没有指向合法位置
+  ```
+
+
+
+### 3. 指针回收相关
 
 ```cpp
 // 错误写法1
@@ -109,6 +362,12 @@ delete p; // trouble
 
 ```cpp
 // 错误写法2
+int* p; // p points to random position of memory
+delete p; // trouble
+if (p == nullptr) { // 错误, p的值未必为空
+  // ... something ...
+} 
+
 int* p; int x = 1;
 p = &x;
 delete p; // delete 和 new 应当相对应出现, delete stack object is undefined behavior(UB)
@@ -145,6 +404,18 @@ char* p3 = new char { 'x' };
 
 cout << *p3;
 ```
+
+
+```cpp
+// 错误写法5
+// 指针 p 指向某个对象
+delete p; // 回收该对象
+if (p == nullptr) { // 错误, 指针p的值未必为空
+  // ... something ...
+} 
+```
+
+
 
 ### 4. const pointer, pointer to constant
 
@@ -592,7 +863,7 @@ float pow ( float base, float exp ); // pow(x, 1.0/3) 注意 x 需非负
   数组做参数时会直接被隐式转化为指针。如下声明是等价的
 
   ```c++
-  void f(int []);
+  void f(int [][10]);
   void f(int *);
   ```
 
@@ -641,157 +912,3 @@ float pow ( float base, float exp ); // pow(x, 1.0/3) 注意 x 需非负
   ```
 
 
-
-### 模板类、抽象基类、内嵌类的相关问题
-
-- 一般建议模板类的实现和声明写在同一个文件里，不分开成两个文件写。
-
- 很多同学问过这个问题。例如
-
-```c++
-// file Array.h
-template<class T> class Array {
-	T* data;
-	int capacity;
-public:
-	Array(int capacity=10);
-};
-```
-
-```c++
-// file Array.cpp
-
-#include "Array.h"
-template<class T> Array<T>::Array(int capacity) {
-	data = new T[capacity];
-}
-```
-
-```c++
-// file main.cpp
-
-#include "Array.h"
-int main() {
-	Array<int> A; // failed!
-}
-```
-
-这里错误的原因时编译的时候每个`.cpp`是独立编译然后链接的。头文件不会被编译，只会做预处理，然后附在 `.cpp`编译后的文件中。因此编译 `main.cpp` 的时候只看见头文件，没有看见实现，也就不知道模板实例如何实现。最终导致 `main.exe` 调用时找不到模板实例的实现。有两种解决方法
-
-1. 将Array的实现和声明都写在一个头文件里，这样 `main` 就可以看到模板实现了。
-
-2. 在实现中显示地添加需要的模板实例，例如
-
-   ```c++
-   // file Array.cpp
-   
-   #include "Array.h"
-   template<class T> Array<T>::Array(int capacity) {
-   	data = new T[capacity];
-   }
-   
-   template class Array<int>; // 显示添加模板实例
-   ```
-
-- 继承抽象基类时，没有将该抽象基类所有的纯虚成员重新实现。
-
-  ```c++
-  class List {
-  public:
-      virtual int size() const = 0; // pure virtual function 
-      virtual ˜List() {} // destructor 
-  };
-
-  class Stack: public List {
-  public:
-      // 忘记定义和实现 int size() const ...
-  };
-  ```
-
-
-
-- 定义某个继承类时，基类必须已经实现，且继承类应在定义时实现。
-
-  ```c++
-  struct List; 
-  strcut LinkList: public List {}; // 错误，基类没有实现
-  ```
-
-  ```c++
-  struct List {}; 
-  strcut LinkList: public List; // 错误，继承类没有在定义处实现
-  ```
-
-- 访问内嵌类。
-
-  ```c++
-  struct List {
-      struct Node { };
-  };
-  
-  typename List::Node* pNode = new typename List::Node;
-  ```
-  
-  
-  
-
-
-## 指针，对象的生存期与内存管理
-
-- 变量或者对象的值没有初始化，或者类内某些成员没有初始化。
-- 对象delete后没有将对应的指针赋值为`nullptr`或`NULL`，造成后续的判空问题。
-- 定义数组时，数组大小使用变量。
-- 数组没有初始化却被访问。（可能引发**SIGSEGV**内存异常的中断）
-- 数组越界访问。（可能引发**SIGSEGV**中断）
-
-```c++
-int N; cin >> N; int arr[N];  // 错误，数组大小不应该使用变量。这样的处理方式可能会有内存问题。
-
-class List {
-    ...
-public:
-    ...
-    int getMax() const {
-        int max; // max 忘记初始化
-        for ...
-    }
-};
-
-int* data = new int[255];
-visit(data[0]); // 没有初始化直接访问 data 数据
-
-
-int* ptr = new int;
-delete ptr; // delete后忘记置NULL
-if (ptr == nullptr) { // 无法进入该分支
-    ...
-}
-```
-
-
-
-- 指针没有`new`就访问。此时指针值是随机值或者`NULL`，访问该位置的内存会引发**SIGSEGV**中断。
-
-- 指针`delete`后再被访问或者再试图`delete`。此时指针值所在的内存位置已经没有对象，任何访问都将引发**SIGSEGV**中断。
-
-  **对象在生存期内，可能被多个指针共享**。假如这些指针都是只读的(read-only)，则一点问题没有。但假若某个指针在某个地方对对象进行了写操作或者删除了对象，新手容易遗忘这件事，然后在别地方使用别的指针操作该对象时出错。
-
-- 指针`new`完再`new`，程序没有记住第一次`new`出来的对象的地址，造成原来的对象悬浮。指针`new`完没有`delete`，这个对象会一直占用内存位置，直到程序结束时由系统回收。
-
-  不过目前而言，这里只会造成内存浪费，对运行不影响。
-
-```c++
-int* p; // p points to random position of memory
-*p = 1; // trouble
-
-
-int* p1 = new int{99};
-int* p2 = p1; // potential trouble
-delete p1; // now p2 doesn’t point to a valid object
-p1 = nullptr; // gives a false sense of safety
-*p2 = 999; // this may cause trouble
-
-
-int* p3 = new int{99}; // object1
-p3 = new int{99}; // p3 points to object2, and object1 is dangling
-```
