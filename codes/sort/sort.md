@@ -68,3 +68,22 @@ for gap in gaps
         A[j+gap] = x;                 //插入x
 ```
  
+
+
+
+# 外排序 
+
+
+> 设在磁盘上存放有375000个记录，做5路平衡归并排序，内存工作区能容纳600个记录，为把所有记录排好序，需要做( ) 趟归并排序。
+
+```
+大概可以这么理解
+
+假设磁盘有375KB ，内存为 600B
+
+0. 每次加载 600B 进入内存，使用任何内排序的方法排序（快排等），可以切分外磁盘为  625 x 600B sorted  chunks
+1. the 1st merge pass: combining 5 x 600B chunks at a time, resulting 125 x 3KB sorted chunks
+2. the 2nd merge pass: combining 5 x 3 KB chunks at a time, resulting 25 x 15KB sorted chunks
+3. the 3rd merge pass: combining 5 x 15KB chunks at a time, resulting 5 x 75KB sorted chunks
+4. the 4th merge pass: combining 5 x 75KB chunks at a time, resulting 1 x 375KB sorted result
+```
