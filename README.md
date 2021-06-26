@@ -9,11 +9,16 @@
 
 ## Tutorials
 
+* [数据结构习题答疑](tutorials/DS-quiz.md)
+
+* [排序算法笔记](codes/sort/sort.md)
+
 * [C++编程、问题与细节【不断更新】](tutorials/Cpp.md)
 
 * [C++流控制库iomanip与C风格printf的对比](tutorials/CppFormat.md)
 
-* [排序算法笔记](codes/sort/sort.md)
+
+
 
 
 
