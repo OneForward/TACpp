@@ -1,6 +1,6 @@
-# [EduCoder相关问题汇总【待更新】](https://github.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
+# [EduCoder相关问题汇总](https://github.com/OneForward/TACpp/blob/master/tutorials/EduCoder.md)
 
-- [EduCoder相关问题汇总【待更新】](#educoder相关问题汇总待更新)
+- [EduCoder相关问题汇总](#educoder相关问题汇总)
   - [官网](#官网)
   - [注册](#注册)
   - [加入班级](#加入班级)
@@ -23,8 +23,7 @@ EduCoder 官网链接为 https://www.educoder.net
 
 输入课堂邀请码
 
-* 课号为 CS171 的同学请输入邀请码 `GHX9U`
-* 课号为 CS1581H(人工智能班) 的同学请输入邀请码 `LM5RK`
+* 课号为 CS1581H(人工智能班) 的同学请输入邀请码 `GZ7RX`
 
 ![](imgs/edu_join_class_invite_code.png)
 
