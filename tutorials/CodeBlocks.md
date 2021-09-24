@@ -30,6 +30,7 @@
     - [7. 侧边栏消失了怎么办？](#7-侧边栏消失了怎么办)
     - [8. 编译输出栏消失了怎么办？或者我的xxx布局消失了找不到了怎么办？](#8-编译输出栏消失了怎么办或者我的xxx布局消失了找不到了怎么办)
     - [9. CodeBlocks 如何添加多文件到项目中？](#9-codeblocks-如何添加多文件到项目中)
+    - [10. 小心存错文件类型 （误存储为 C 文件类型，导致编译失败）](#10-小心存错文件类型-误存储为-c-文件类型导致编译失败)
 
 
 
@@ -280,12 +281,12 @@ int main()
 
 或者按照如下步骤进行修改，如果仍然失败请咨询助教。
 
-#### 设置文件编码格式
+#### 设置文件编码格式、编译命令中增加执行编码参数
 
 <details>
-  <summary> 设置文件编码格式【点开小三角形查看】 </summary>
+  <summary> 设置文件编码格式、编译命令中增加执行编码参数【点开小三角形查看】 </summary>
 
-* 设置 -> 编辑器
+* 设置 -> 编辑器 (Settings -> Editor) 
 
 ![](imgs/setting-editor.png)
 
@@ -293,20 +294,21 @@ int main()
 
 ![](imgs/file-encoding.png)
 
-</details>
 
-#### 在编译命令中增加编码格式的设置
 
-<details>
-  <summary> 在编译命令中增加编码格式的设置【点开小三角形查看】 </summary>
+* 设置 -> 编译器 (Settings -> Compiler)
 
-第一次使用可能会出现是否要进行 C++/C 源文件关联 CodeBlocks 的提示, 
+![](imgs/setting-compiler.png)
 
-![](imgs/File%20Association%20提示.png)
+* 在 `全局编译器设置` 下，`编译器设置 ` 选择 `其他编译器设置`，然后在图示位置添加如下文本
 
-建议初学者选择 **最后一项**，全部关联。对其他IDE更熟悉的同学则可以根据自己的需求选择。
+```
+-fexec-charset=gbk
+```
 
-![](imgs/YesFileAssociation.png)
+
+![](imgs/other-compiler-options.png)
+
 
 </details>
 
@@ -321,8 +323,7 @@ int main()
 
 ![](imgs/setting-compiler.png)
 
-* 在 `global compiler settings`下，`Selected Compiler`选择 `GNU GCC Compiler`，然后点击 `Set as default
-  `
+* 在 `global compiler settings`下，`Selected Compiler`选择 `GNU GCC Compiler`，然后点击 `Set as default`
 ![](imgs/select-compiler.png)
 
 </details>
@@ -433,4 +434,18 @@ int main()
 
 
 
+### 10. 小心存错文件类型 （误存储为 C 文件类型，导致编译失败）
 
+<details>
+
+  <summary> 小心存错文件类型 （误存储为 C 文件类型，导致编译失败）【点开小三角形查看】  </summary>
+
+譬如如下文件编译时会提示找不到 `iostream`，这是因为误存储为 C 文件类型了，而 C 里面 没有 `iostream` 这个头文件库。
+
+![](imgs/2021-09-24-21-29-43.png)
+
+其实注意到在为 Project 添加文件的过程中，有一个如下的选择文件类型的过程
+
+![](imgs/2021-09-24-21-33-38.png)
+
+</details>
