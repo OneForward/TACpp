@@ -56,13 +56,16 @@ struct Stock
     }
 
     void dispMaxProfitByOneTrade() {
-        int maxProfit = 0;
-        for (int i = 0; i < len; ++i) { 
-            for (int j = i+1; j < len; ++j) { 
-                maxProfit = max(maxProfit, prices[j] - prices[i]);
-            }
+        // buy: 记录到第 i 天的时候最多赚多少（当天只允许买入或者不交易）
+        // sell: 记录到第 i 天的时候最多赚多少（当天只允许卖出或者不交易）
+        int buy = -0x7fffffff, sell = 0;
+        for (int i = 0; i < len; i++)
+        {
+            auto x = prices[i];
+            buy = max(buy, -x);
+            sell = max(sell, buy + x);
         }
-        cout << maxProfit << endl;
+        cout << sell << endl;
     }
 
     void dispMaxProfitByMultipleTrade() {
