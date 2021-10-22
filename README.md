@@ -25,7 +25,7 @@
 
 ## Misc
 
-* [😁 CodeBlocks相关问题汇总](tutorials/CodeBlocks.md)
+* [😁 **CodeBlocks相关问题汇总**](tutorials/CodeBlocks.md)
 
 * [EduCoder相关问题汇总](tutorials/EduCoder.md)
 
@@ -35,10 +35,14 @@
 
 ## 视频
 
-* [学生Qt项目展示(b站视频)](https://www.bilibili.com/video/BV1Hr4y1T7y1)
 
-* [2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
-* [2021-04-10-数据结构课程答疑(b站视频)](https://www.bilibili.com/video/BV1Hp4y1t77L/)
+* 👀 [**【2021秋】C++预备（b站视频）**](https://www.bilibili.com/video/BV1n34y1U7Y3/)
+* 👀 [**【2021秋】C++答疑（b站视频）**](https://b23.tv/qk3cBg)
+
+
+* [【2021春】数据结构答疑（b站视频）](https://www.bilibili.com/video/BV1Hp4y1t77L/)
+* [【2020秋】C++答疑（b站视频）](https://www.bilibili.com/video/BV1mt4y1a71t/)
+* [【2020秋】学生Qt项目展示（b站视频）](https://www.bilibili.com/video/BV1Hr4y1T7y1)
 
 
 ## Qt项目 

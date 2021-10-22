@@ -1,7 +1,6 @@
 # [C++编程、问题与细节【不断更新】](https://github.com/OneForward/TACpp/blob/master/tutorials/Cpp.md)
 
 
-[2020-11-16-C++课程小结(b站视频)](https://www.bilibili.com/video/BV1mt4y1a71t/)
 
 - [C++编程、问题与细节【不断更新】](#c编程问题与细节不断更新)
   - [入门时问的问题](#入门时问的问题)
