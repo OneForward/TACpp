@@ -82,6 +82,15 @@ struct Stock
         }
         cout << maxProfit << endl;
     }
+
+    void selectFunc(int i) {
+        using Func = void (Stock::*)();
+        Func funcs[] = {nullptr, inputPrices, dispPrices, dispSortedPrices, 
+                        dispArgMaxMin, dispMaxProfitByOneTrade, 
+                        dispMaxProfitByMultipleTrade};
+        
+        (this->*funcs[i])();
+    }
 };
 
 void showOption(){
@@ -106,29 +115,8 @@ int main()
     while (true)
     {
         cin >> op;
-        switch (op)
-        {
-        case 1:
-            stock.inputPrices();
-            break;
-        case 2:
-            stock.dispPrices();
-            break;
-        case 3:
-            stock.dispSortedPrices();
-            break;
-        case 4:
-            stock.dispArgMaxMin();
-            break;
-        case 5:
-            stock.dispMaxProfitByOneTrade();
-            break;
-        case 6:
-            stock.dispMaxProfitByMultipleTrade();
-            break;
-        default:
-            return 0;
-        }
+        if (op == 7) return 0;
+        stock.selectFunc(op);
     }
     
 }
