@@ -1,0 +1,6 @@
+{
+
+    "code-runner.executorMap": {
+        "cpp": "cd $dir; if ($?) {g++ -std=c++2a -Wall \"-Wl,--stack,10485760\" *.cpp -o \"main.exe\"}; if ($?) { .\\main.exe }",
+    },
+}
