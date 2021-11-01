@@ -20,7 +20,7 @@
 
 * [排序算法笔记](codes/sort/sort.md)
 
-
+* [🤦‍♂️VSCode配置(many potential bugs)](codes/VSCode/README.md)
 
 
 ## Misc
