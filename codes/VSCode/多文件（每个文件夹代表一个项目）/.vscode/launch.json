@@ -4,24 +4,12 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "cl.exe - 生成和调试活动文件",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "Debug/${relativeFileDirname}.exe",
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "console": "integratedTerminal",
-            "preLaunchTask": "C/C++: cl.exe build active file",
-            "internalConsoleOptions": "openOnSessionStart",
-        },
         
         {
             "name": "gdb-win",
             "type": "cppdbg",
             "request": "launch",
-            "program": "Debug/${relativeFileDirname}.exe",
+            "program": "${fileDirname}/Debug/${relativeFileDirname}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -36,6 +24,19 @@
                 }
             ],
             "preLaunchTask": "g++-win build active file"
+        },
+        
+        {
+            "name": "cl.exe - 生成和调试活动文件",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileDirname}/Debug/${relativeFileDirname}.exe",
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "C/C++: cl.exe build active file",
+            "internalConsoleOptions": "openOnSessionStart",
         },
 
 

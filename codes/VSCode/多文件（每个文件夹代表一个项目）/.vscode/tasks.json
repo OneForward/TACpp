@@ -34,7 +34,7 @@
         {
             "type": "shell",
             "label": "g++-win build active file",
-            "command": "If (!(Test-Path Debug)) {mkdir Debug}; g++ -std=c++2a  -g *.cpp -o ${fileDirname}/Debug/${relativeFileDirname}",
+            "command": "If (!(Test-Path Debug)) {mkdir Debug}; g++ -std=c++11  -g *.cpp -o ${fileDirname}/Debug/${relativeFileDirname}",
             "args": [],
             "problemMatcher": [
                 "$gcc"
