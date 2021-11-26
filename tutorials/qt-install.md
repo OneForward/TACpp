@@ -1,4 +1,4 @@
-# [Qt的安装与简单使用](https://github.com/OneForward/TACpp/blob/master/tutorials/qt-install.md)
+# [Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
 
 - [Qt的安装与简单使用](#qt的安装与简单使用)
   - [Qt 下载链接](#qt-下载链接)
@@ -62,7 +62,7 @@ Qt 安装包下载链接请点击 [交大镜像](https://mirrors.sjtug.sjtu.edu.
 
 ## 书写第一个 Qt 可视化界面 - 简易计算器
 
-本项目源代码由 github 托管。 点击 [链接](https://github.com/OneForward/TACpp/archive/master.zip) 下载。下载后，在 labs 文件夹下，使用 Qt 打开相应的 .pro 工程文件即可运行了。或者，参照如下流程，一步一步地添加代码。
+本项目源代码由 gitee 托管。 点击 [链接](https://gitee.com/OneForward/TACpp/repository/archive/gitee.zip) 下载。下载后，在 labs 文件夹下，使用 Qt 打开相应的 .pro 工程文件即可运行了。或者，参照如下流程，一步一步地添加代码。
 
 ### 新建Qt项目
 

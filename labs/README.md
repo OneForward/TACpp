@@ -4,13 +4,13 @@ Qt 项目遵循自愿原则，不做强求。
 
 ## 1. Qt 项目是什么？
 
-### [👉Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/master/tutorials/qt-install.md)
+### [👉Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
 
-###  [👉Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/master/tutorials/qt-2048-v1.md)
+###  [👉Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
 
-* [Qt实践-2048游戏教程(1): GameBoard 模块](https://gitee.com/OneForward/TACpp/blob/master/tutorials/qt-2048-v1.md)
-* [Qt实践-2048游戏教程(2): Cell 模块](https://gitee.com/OneForward/TACpp/blob/master/tutorials/qt-2048-v2.md)
-* [Qt实践-2048游戏教程(3): Game 模块](https://gitee.com/OneForward/TACpp/blob/master/tutorials/qt-2048-v3.md)
+* [Qt实践-2048游戏教程(1): GameBoard 模块](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
+* [Qt实践-2048游戏教程(2): Cell 模块](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v2.md)
+* [Qt实践-2048游戏教程(3): Game 模块](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v3.md)
 
 ### [👉往届同学们的Qt项目作品](https://gitee.com/OneForward/QtGallery)
 
