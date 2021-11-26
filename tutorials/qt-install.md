@@ -20,7 +20,7 @@ Qt 必须要注册账号后才能安装。请访问链接 [注册账号](https:/
 
 ## Qt 下载链接 
 
-Qt 安装包下载链接请点击 [交大镜像](https://mirrors.sjtug.sjtu.edu.cn/qt/official_releases/qt/5.14/5.14.2/) ，里面包含 windows、linux 和 mac 下的安装包。
+Qt 安装包下载链接请点击 [交大镜像](https://mirrors.sjtug.sjtu.edu.cn/qt/official_releases/qt/5.12/5.12.9/) ，里面包含 windows、linux 和 mac 下的安装包。
 
 ## Qt 安装步骤
 
