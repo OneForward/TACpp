@@ -4,7 +4,7 @@ Qt 项目遵循自愿原则，不做强求。
 
 ## 1. Qt 项目是什么？
 
-### [👉Qt的安装与简单使用](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
+### [👉Qt的下载与安装](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
 
 ###  [👉Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
 

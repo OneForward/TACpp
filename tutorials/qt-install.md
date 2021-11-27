@@ -14,13 +14,13 @@ Qt 是一个免费、开源的可视化界面工具包，用于创建图形用�
 
 Qt 目前是由公开上市公司 Qt Company 和 Qt 项目组在开源代码治理下开发的，由个人开发者和组织共同参与。Qt 可在商业许可和开源 GPL 2.0，GPL 3.0和 LGPL 3.0 许可下使用。【摘自维基 [Qt (software)](https://en.wikipedia.org/wiki/Qt_(software)) 】
 
-Qt 必须要注册账号后才能安装。请访问链接 [注册账号](https://login.qt.io/register) 。
+Qt 必须要注册账号后才能安装。请访问链接 [👉注册账号](https://login.qt.io/register) 。
 
 从2020年开始 Qt 的长期支持版本(long term support, LTS) 和离线安装包只有商业许可才能使用，影响 Qt 5.15 以及之后的版本，旧版本的 Qt 则不受影响。因此目前公开渠道只能下载到 Qt 5.14。当然由于 Qt 是开源代码的，你也可以自己下载源码编译。 [qt-offering-changes-2020](https://www.qt.io/blog/qt-offering-changes-2020)
 
 ## Qt 下载链接 
 
-Qt 安装包下载链接请点击 [交大镜像](https://mirrors.sjtug.sjtu.edu.cn/qt/official_releases/qt/5.12/5.12.9/) ，里面包含 windows、linux 和 mac 下的安装包。
+请点击 [👉交大镜像链接下载 Qt 安装包](https://mirrors.sjtug.sjtu.edu.cn/qt/official_releases/qt/5.12/5.12.9/) ，里面包含 windows、linux 和 mac 下的安装包。
 
 ## Qt 安装步骤
 
@@ -62,7 +62,11 @@ Qt 安装包下载链接请点击 [交大镜像](https://mirrors.sjtug.sjtu.edu.
 
 ## 书写第一个 Qt 可视化界面 - 简易计算器
 
-本项目源代码由 gitee 托管。 点击 [链接](https://gitee.com/OneForward/TACpp/repository/archive/gitee.zip) 下载。下载后，在 labs 文件夹下，使用 Qt 打开相应的 .pro 工程文件即可运行了。或者，参照如下流程，一步一步地添加代码。
+本项目源代码由 github 和 gitee 托管。 点击 [👉 Github 源代码链接](https://github.com/OneForward/TACpp/archive/refs/heads/gitee.zip) 或者 [ Gitee 源代码链接](https://gitee.com/OneForward/TACpp/repository/archive/gitee.zip)  下载。
+
+下载后，在 labs 文件夹下，使用 Qt 打开相应的 .pro 工程文件即可运行了。
+
+或者，参照如下流程，你可以从零开始一步一步地添加代码。
 
 ### 新建Qt项目
 
