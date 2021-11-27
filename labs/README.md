@@ -4,19 +4,19 @@ Qt 项目遵循自愿原则，不做强求。
 
 ## 1. Qt 项目是什么？
 
-### [👉Qt的下载与安装](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
+### 👉[Qt的下载与安装](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-install.md)
 
-###  [👉Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
+###  👉[Qt实践-2048游戏](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
 
 * [Qt实践-2048游戏教程(1): GameBoard 模块](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v1.md)
 * [Qt实践-2048游戏教程(2): Cell 模块](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v2.md)
 * [Qt实践-2048游戏教程(3): Game 模块](https://gitee.com/OneForward/TACpp/blob/gitee/tutorials/qt-2048-v3.md)
 
-### [👉往届同学们的Qt项目作品](https://gitee.com/OneForward/QtGallery)
+### 👉[往届同学们的Qt项目作品](https://gitee.com/OneForward/QtGallery)
 
 ## 2. 为什么你会选择完成这个Qt项目？
 
-你可以走出平日里 C++ 只和终端交互的作业，完成一款简单的 GUI界面 的实现。你将会学会一个简单计算器的实现和一个 2048 小游戏的实现。之后，你可以 **`任选题材`** 写一个你想做的项目。
+你可以走出平日里 C++ 只和终端交互的作业，完成一款简单的 GUI界面 的实现。你将会学会一个简单计算器的实现和一个 2048 小游戏的实现。之后，你可以 **`任选题材`** 写一个你想做的GUI项目（甚至可以使用 Qt 以外的框架）。
 
 完成该项目，你还可以获得 5 分额外的平时分：如果你的平时分低于35分，你可以增加5分；如果你的平时分超过35分，你可以获得平时分40分满分。对于绝大多数同学，平时分（不加分的情况下）已经是满分了，因此，加分的激励意义并不大。
 
