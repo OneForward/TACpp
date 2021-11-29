@@ -47,12 +47,18 @@
 
 ## Qt项目 
 
-* [学生Qt项目代码合集](https://gitee.com/OneForward/QtGallery)
 
-* [Qt的安装与简单使用](tutorials/qt-install.md)
+### [🥰Qt项目介绍](labs/README.md)
 
-* [Qt实践-2048游戏](tutorials/qt-2048-v1.md)
+### [👉Qt的下载与安装](tutorials/qt-install.md)
 
+### [👉Qt实践-2048游戏](tutorials/qt-2048-v1.md)
+
+* [Qt实践-2048游戏教程(1): GameBoard 模块](tutorials/qt-2048-v1.md)
+* [Qt实践-2048游戏教程(2): Cell 模块](tutorials/qt-2048-v2.md)
+* [Qt实践-2048游戏教程(3): Game 模块](tutorials/qt-2048-v3.md)
+
+### [👉往届同学们的Qt项目作品](https://gitee.com/OneForward/QtGallery)
 
 
 
