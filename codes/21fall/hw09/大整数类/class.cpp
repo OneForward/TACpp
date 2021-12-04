@@ -1,9 +1,12 @@
 #include "class.h"
 
-
 istream& operator>> (istream& is, BigInteger& x) {
-    string s; is >> s;
-    int len = x.len = s.size();
+    char s[1005]; 
+    is.getline(s, sizeof(s));
+
+    int len = 0;
+    while (s[len]) len++;
+    x.len = len;
     for (int i = 0; i < len; ++i) { 
         x.data[i] = s[len-1-i] - '0';
     }
@@ -33,5 +36,3 @@ BigInteger operator+ (BigInteger x, const BigInteger& y) {
     x += y;
     return x;
 }
-
-
