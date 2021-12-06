@@ -4,15 +4,15 @@ using namespace std;
 
 struct ListNode {
     int val;
-    ListNode *next = NULL; // C++11 non-static member initialization
+    ListNode *next;
 };
 
 
 ListNode* reverseList(ListNode* head) {
     /********* Begin *************/
-    ListNode* prev = NULL, *curr = head, *next;
+    ListNode* prev{}, *curr = head;
     while (curr) {
-        next = curr->next; curr->next = prev;
+        auto next = curr->next; curr->next = prev;
         prev = curr; curr = next;
     }
     return prev;
@@ -22,11 +22,10 @@ ListNode* reverseList(ListNode* head) {
 
 
 ListNode* createList() {
+    ListNode head{};  auto p = &head; 
     int x;
-    ListNode head; 
-    ListNode* p = &head; 
     while (cin >> x) {
-        p->next = new ListNode; p->next->val = x; p->next->next = NULL;
+        p->next = new ListNode{x}; 
         p = p->next; 
     }
     return head.next;
@@ -42,8 +41,8 @@ void disp(ListNode* p) {
 
 int main()
 {
-    ListNode* L1 = createList(); disp(L1);
-    ListNode* L2 = reverseList(L1); disp(L2);
+    auto L1 = createList();    disp(L1);
+    auto L2 = reverseList(L1); disp(L2);
 
     return 0;
 }
