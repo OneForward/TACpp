@@ -24,6 +24,14 @@
 | Shell 排序 | $n \log n$ |  $n^{4/3}$ |  $n^{3/2}$ |     1  |   No   |  Small code size.                                                                 |   
 
 
+## Surprising Sort
+
+```rust
+i∈[0, N)                       
+    j∈[0, N)
+        if A[i] < A[j]: swap(A[i], A[j])
+```
+
 ## 插入排序
 
 ```rust
