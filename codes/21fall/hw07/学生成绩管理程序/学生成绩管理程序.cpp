@@ -27,7 +27,7 @@ struct StudentManager
     */
     void insert_student(bool isupdated=false) {
         int pos = search_by_sid();
-        Student& s = students[pos];
+        auto&& s = students[pos];
         for (auto&& grade: s.grades) cin >> grade;
         cin >> ws; // skip whitespace
         cin.getline(s.name, 50);
@@ -99,16 +99,16 @@ struct StudentManager
     }
 
     void sort_students(Student* A, int n, bool by_sid) {
-        // sort by sid or by total_score
+        // sort by sid or by total_score, surprising sort
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
                 if (cmp(A[i], A[j], by_sid)) swap(A[i], A[j]);
     }
 
     void display_student(int pos) {
-        const auto& s = students[pos];
+        auto&& s = students[pos];
         cout << s.sid << " " << s.name << " ";
-        for (int i = 0; i < N_COURSES; ++i) cout << s.grades[i] << " ";
+        for (auto&& grade: s.grades) cout << grade << " ";
         cout << endl;
     }
 
