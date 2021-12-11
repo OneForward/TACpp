@@ -1,91 +1,79 @@
 #include <iostream>
-#include <cstdio>
-
+#include <algorithm>
+#include <vector>
+#include <climits>
 using namespace std;
 
-void bubbleSort(int* A, int n) {
-    for (int i=n-1; i>=0; --i) {
-        bool exist_swap = false;
-        for (int j=0; j<i; ++j) {
-            if (A[j] > A[j+1]) swap(A[j], A[j+1]), exist_swap = true;
-        }
-        if (! exist_swap) break;
-    }
-}
+using VI = vector<int>;
+#define ALL(A) A.begin(),A.end()
 
-void dispArray(int* A, int n) {
-    for (int i = 0; i < n; ++i) { 
-        cout << A[i] << " ";
+void dispArray(const VI& v) {
+    for (auto&& x: v) { 
+        cout << x << " ";
     }
     cout << endl;
 }
 
 struct Stock
 {
-    int len, prices[1005];
+    VI prices;
 
     void inputPrices() {
-        len = 0; int x = 0;
+        int x = 0;
         while (cin >> x && x != -1) {
-            prices[len++] = x;
+            prices.push_back(x);
         }
     }
 
     void dispPrices() {
-        dispArray(prices, len);
+        dispArray(prices);
     }
 
     void dispSortedPrices() {
-        int tmpPrices[1005];
-        for (int i = 0; i < len; ++i) { 
-            tmpPrices[i] = prices[i];
-        }
-        bubbleSort(tmpPrices, len);
-        dispArray(tmpPrices, len);
+        auto v = prices;
+        sort(ALL(v));
+        dispArray(v);
     }
 
     void dispArgMaxMin() {
-        int maxVal = prices[0], maxIndex = 0, 
-            minVal = prices[0], minIndex = 0;
-        for (int i = 1; i < len; ++i) { 
-            if (prices[i] > maxVal) maxVal = prices[i], maxIndex = i;
-            if (prices[i] < minVal) minVal = prices[i], minIndex = i;
+        int maxIndex = 0, minIndex = 0;
+        for (int i = 0; i < (int)prices.size(); ++i) { 
+            if (prices[i] > prices[maxIndex])  maxIndex = i;
+            if (prices[i] < prices[minIndex])  minIndex = i;
         }
-        // cout << maxIndex << " " << minIndex << endl;
         cout << minIndex << " " << maxIndex << endl;
     }
 
     void dispMaxProfitByOneTrade() {
-        // buy: 记录到第 i 天的时候最多赚多少（当天只允许买入或者不交易）
-        // sell: 记录到第 i 天的时候最多赚多少（当天只允许卖出或者不交易）
-        int buy = -0x7fffffff, sell = 0;
-        for (int i = 0; i < len; i++)
+        // sell[i]: 到第 i 天为止最后一笔交易是卖出股票（未必是第 i 天卖出），所获得的最大收益
+        // buy[i] : 到第 i 天为止最后一笔交易是买入股票（未必是第 i 天买入），所获得的最大收益
+        int buy = INT_MIN, sell = 0;
+        for (auto&& x: prices)
         {
-            auto x = prices[i];
             buy = max(buy, -x);
-            sell = max(sell, buy + x);
+            sell = buy + x;
         }
         cout << sell << endl;
     }
 
     void dispMaxProfitByMultipleTrade() {
-        // buy: 记录到第 i 天的时候最多赚多少（当天只允许买入或者不交易）
-        // sell: 记录到第 i 天的时候最多赚多少（当天只允许卖出或者不交易）
-        int buy = -0x7fffffff, sell = 0;
-        for (int i = 0; i < len; i++)
+        // sell[i]: 到第 i 天为止最后一笔交易是卖出股票（未必是第 i 天卖出），所获得的最大收益
+        // buy[i] : 到第 i 天为止最后一笔交易是买入股票（未必是第 i 天买入），所获得的最大收益
+        int buy = INT_MIN, sell = 0;
+        for (auto&& x: prices)
         {
-            auto x = prices[i];
             buy = max(buy, sell - x);
-            sell = max(sell, buy + x);
+            sell = buy + x;
         }
         cout << sell << endl;
     }
     
     void selectFunc(int i) {
-        using Func = void (Stock::*)();
-        Func funcs[] = {nullptr, inputPrices, dispPrices, dispSortedPrices, 
-                        dispArgMaxMin, dispMaxProfitByOneTrade, 
-                        dispMaxProfitByMultipleTrade};
+        using Func = void (Stock::*)(); // gcc7.2.0 
+        Func funcs[] = {nullptr, &Stock::inputPrices, &Stock::dispPrices, 
+                        &Stock::dispSortedPrices, &Stock::dispArgMaxMin, 
+                        &Stock::dispMaxProfitByOneTrade, 
+                        &Stock::dispMaxProfitByMultipleTrade};
         
         (this->*funcs[i])();
     }
