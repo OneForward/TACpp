@@ -12,12 +12,14 @@ struct Complex
     {
         real += rhs.real;
         imag += rhs.imag;
+        return *this;
     }
 
     Complex& operator-=(const Complex& rhs)
     {
         real -= rhs.real;
         imag -= rhs.imag;
+        return *this;
     }
     
     Complex& operator*=(const Complex& rhs)
@@ -25,6 +27,7 @@ struct Complex
         int real_copy = real;
         real = real * rhs.real - imag * rhs.imag;
         imag = real_copy * rhs.imag + imag * rhs.real;
+        return *this;
     }
     
     void Print()
