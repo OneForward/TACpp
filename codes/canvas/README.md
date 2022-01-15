@@ -20,7 +20,7 @@
 
 ## 使用脚本转化为符合 [canvas 上传格式](https://community.canvaslms.com/t5/Instructor-Guide/How-do-I-import-grades-in-the-Gradebook/ta-p/807) 的文件即可
 
-脚本源码见 [源码](解析 educoder 分数、生成满足 canvas 分数上传格式的 csv.py)
+脚本源码见 [源码链接](https://gitee.com/OneForward/TACpp/blob/gitee/codes/canvas/%E8%A7%A3%E6%9E%90%20educoder%20%E5%88%86%E6%95%B0%E3%80%81%E7%94%9F%E6%88%90%E6%BB%A1%E8%B6%B3%20canvas%20%E5%88%86%E6%95%B0%E4%B8%8A%E4%BC%A0%E6%A0%BC%E5%BC%8F%E7%9A%84%20csv.py)
 
 修改两个文件名即可。
 
